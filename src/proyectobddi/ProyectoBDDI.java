@@ -15,7 +15,9 @@ public class ProyectoBDDI {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("hola como estan");
+        System.out.println("bien y vos");
+        System.out.println("gadudm");
     }
     
 }
