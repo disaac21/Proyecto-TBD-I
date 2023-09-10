@@ -4,12 +4,7 @@
  */
 package proyectobddi;
 
-import com.formdev.flatlaf.FlatDarculaLaf;
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatIntelliJLaf;
-import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.FlatLightLaf;
-import com.formdev.flatlaf.FlatPropertiesLaf;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -95,6 +90,7 @@ public class probando extends javax.swing.JFrame {
         System.out.println("hola como estan");
         System.out.println("bien y vos");
         
+        
         String user = "admin";
         String password = "DanielVictorSerlio";
         String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.com/proyecto";
@@ -120,6 +116,7 @@ public class probando extends javax.swing.JFrame {
         }
         
         System.out.println("gadudm");
+        
         
     }
 
