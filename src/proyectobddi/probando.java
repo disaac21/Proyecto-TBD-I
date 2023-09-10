@@ -4,6 +4,12 @@
  */
 package proyectobddi;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatIntelliJLaf;
+import com.formdev.flatlaf.FlatLaf;
+import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.FlatPropertiesLaf;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,6 +17,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.UIManager;
 
 /**
  *
@@ -80,6 +87,12 @@ public class probando extends javax.swing.JFrame {
 
     
     public static void main(String args[]) {
+        
+        try {
+            UIManager.setLookAndFeel( new FlatLightLaf() );
+        } catch (Exception e) {
+            System.out.println("failed to initialized");
+        }
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
