@@ -20,9 +20,7 @@ import javax.swing.UIManager;
  */
 public class probando extends javax.swing.JFrame {
 
-    /**
-     * Creates new form probando
-     */
+    
     public probando() {
         initComponents();
     }
@@ -73,6 +71,7 @@ public class probando extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+
     
     public static void main(String args[]) {
         
@@ -87,6 +86,7 @@ public class probando extends javax.swing.JFrame {
                 new probando().setVisible(true);
             }
         });
+
         System.out.println("hola como estan");
         System.out.println("bien y vos");
         
