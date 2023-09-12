@@ -114,7 +114,7 @@ public class MainFrame extends javax.swing.JFrame {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO CLIENTE VALUES(222, 'Prueba 2', 'Prueba@gmail.com')");
+            statement.executeUpdate("INSERT INTO CLIENTE VALUES(4, 'Prueba 4', 'Prueba@gmail.com')");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");
