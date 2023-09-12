@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JDialog;
 import javax.swing.UIManager;
 
 /**
@@ -134,7 +135,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_admin_visibleMouseClicked
 
     private void admin_visibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_visibleActionPerformed
-        
+    
     }//GEN-LAST:event_admin_visibleActionPerformed
 
     
