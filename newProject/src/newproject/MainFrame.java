@@ -38,6 +38,8 @@ public class MainFrame extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        admin_visible = new javax.swing.JButton();
+        user_visible = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,6 +55,20 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel2.setText("USER");
 
         jLabel3.setText("PASSWORD");
+
+        admin_visible.setText("admin");
+        admin_visible.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_visibleMouseClicked(evt);
+            }
+        });
+        admin_visible.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                admin_visibleActionPerformed(evt);
+            }
+        });
+
+        user_visible.setText("user");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,11 +93,21 @@ public class MainFrame extends javax.swing.JFrame {
                             .addGap(271, 271, 271)
                             .addComponent(jLabel3))))
                 .addContainerGap(264, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(user_visible)
+                    .addComponent(admin_visible))
+                .addGap(64, 64, 64))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(88, 88, 88)
+                .addGap(28, 28, 28)
+                .addComponent(admin_visible)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(user_visible)
+                .addGap(8, 8, 8)
                 .addComponent(jLabel1)
                 .addGap(39, 39, 39)
                 .addComponent(jLabel2)
@@ -102,6 +128,14 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void admin_visibleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_visibleMouseClicked
+        
+    }//GEN-LAST:event_admin_visibleMouseClicked
+
+    private void admin_visibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_visibleActionPerformed
+        
+    }//GEN-LAST:event_admin_visibleActionPerformed
 
     
     public static void main(String args[]) {
@@ -150,11 +184,13 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton admin_visible;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton user_visible;
     // End of variables declaration//GEN-END:variables
 }
