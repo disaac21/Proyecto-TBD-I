@@ -41,6 +41,14 @@ public class MainFrame extends javax.swing.JFrame {
         tiendaTab = new javax.swing.JPanel();
         tiendaTabbedPane = new javax.swing.JTabbedPane();
         tiendaCrearTab = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
         tiendaModificarTab = new javax.swing.JPanel();
         tiendaEliminarTab = new javax.swing.JPanel();
         clienteTab = new javax.swing.JPanel();
@@ -84,20 +92,57 @@ public class MainFrame extends javax.swing.JFrame {
         previewUserButton = new javax.swing.JButton();
 
         adminScreen.setTitle("Admin Screen");
-        adminScreen.setMaximumSize(new java.awt.Dimension(600, 400));
         adminScreen.setMinimumSize(new java.awt.Dimension(600, 400));
 
         adminTextPrueba.setText("Welcome Admin");
+
+        jLabel1.setText("ID:");
+
+        jLabel2.setText("Nombre:");
+
+        jLabel3.setText("Horario:");
+
+        jLabel4.setText("Ubicación:");
 
         javax.swing.GroupLayout tiendaCrearTabLayout = new javax.swing.GroupLayout(tiendaCrearTab);
         tiendaCrearTab.setLayout(tiendaCrearTabLayout);
         tiendaCrearTabLayout.setHorizontalGroup(
             tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(tiendaCrearTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGap(16, 16, 16)
+                .addGroup(tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField1)
+                    .addComponent(jTextField2)
+                    .addComponent(jTextField3)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                .addContainerGap(375, Short.MAX_VALUE))
         );
         tiendaCrearTabLayout.setVerticalGroup(
             tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(tiendaCrearTabLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         tiendaTabbedPane.addTab("Crear", tiendaCrearTab);
@@ -132,11 +177,11 @@ public class MainFrame extends javax.swing.JFrame {
         tiendaTab.setLayout(tiendaTabLayout);
         tiendaTabLayout.setHorizontalGroup(
             tiendaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tiendaTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(tiendaTabbedPane)
         );
         tiendaTabLayout.setVerticalGroup(
             tiendaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tiendaTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(tiendaTabbedPane)
         );
 
         mantenimientoTabbedPane.addTab("Tienda", tiendaTab);
@@ -353,7 +398,7 @@ public class MainFrame extends javax.swing.JFrame {
         mantenimientoTab.setLayout(mantenimientoTabLayout);
         mantenimientoTabLayout.setHorizontalGroup(
             mantenimientoTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mantenimientoTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(mantenimientoTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         mantenimientoTabLayout.setVerticalGroup(
             mantenimientoTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -490,7 +535,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(adminScreenLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(adminScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(adminTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                    .addComponent(adminTabbedPane)
                     .addGroup(adminScreenLayout.createSequentialGroup()
                         .addComponent(adminTextPrueba)
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -704,6 +749,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel facturaModificarTab;
     private javax.swing.JPanel facturaTab;
     private javax.swing.JTabbedPane facturaTabbedPane;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -713,6 +762,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel mantenimientoTab;
     private javax.swing.JTabbedPane mantenimientoTabbedPane;
