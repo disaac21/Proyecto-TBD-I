@@ -15,21 +15,14 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="adminTabbedPane" max="32767" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="adminTextPrueba" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="adminTabbedPane" pref="597" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="adminTextPrueba" min="-2" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="adminTabbedPane" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -38,11 +31,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="adminTextPrueba">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Welcome Admin"/>
-          </Properties>
-        </Component>
         <Container class="javax.swing.JTabbedPane" name="adminTabbedPane">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
@@ -70,6 +58,9 @@
               </Layout>
               <SubComponents>
                 <Container class="javax.swing.JTabbedPane" name="mantenimientoTabbedPane">
+                  <Properties>
+                    <Property name="tabPlacement" type="int" value="2"/>
+                  </Properties>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                   <SubComponents>
@@ -96,6 +87,9 @@
                       </Layout>
                       <SubComponents>
                         <Container class="javax.swing.JTabbedPane" name="tiendaTabbedPane">
+                          <Properties>
+                            <Property name="tabPlacement" type="int" value="2"/>
+                          </Properties>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                           <SubComponents>
@@ -111,22 +105,27 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="crearTiendaButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jTextField1" max="32767" attributes="0"/>
-                                              <Component id="jTextField2" max="32767" attributes="0"/>
-                                              <Component id="jTextField3" max="32767" attributes="0"/>
-                                              <Component id="jTextField4" pref="150" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="tienda_idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_horarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_ubicacionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="375" max="32767" attributes="0"/>
+                                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="tienda_nombreTextField" max="32767" attributes="0"/>
+                                              <Component id="tienda_horarioTextField" max="32767" attributes="0"/>
+                                              <Component id="tienda_ubicacionTextField" max="32767" attributes="0"/>
+                                              <Component id="tienda_idTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="205" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -135,57 +134,64 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_idTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_nombreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_horarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_horarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_ubicacionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tienda_ubicacionTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="111" max="32767" attributes="0"/>
+                                          <EmptySpace pref="171" max="32767" attributes="0"/>
+                                          <Component id="crearTiendaButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JLabel" name="jLabel1">
+                                <Component class="javax.swing.JLabel" name="tienda_idLabel">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="ID:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel2">
+                                <Component class="javax.swing.JTextField" name="tienda_idTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="tienda_nombreLabel">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="Nombre:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel3">
+                                <Component class="javax.swing.JTextField" name="tienda_nombreTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="tienda_horarioLabel">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="Horario:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel4">
+                                <Component class="javax.swing.JTextField" name="tienda_horarioTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="tienda_ubicacionLabel">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="Ubicaci&#xf3;n:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField1">
+                                <Component class="javax.swing.JTextField" name="tienda_ubicacionTextField">
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField2">
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField3">
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField4">
+                                <Component class="javax.swing.JButton" name="crearTiendaButton">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Crear Tienda"/>
+                                  </Properties>
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -249,17 +255,20 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="clienteTabbedPane" alignment="0" pref="600" max="32767" attributes="0"/>
+                              <Component id="clienteTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="clienteTabbedPane" alignment="0" pref="300" max="32767" attributes="0"/>
+                              <Component id="clienteTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
                         <Container class="javax.swing.JTabbedPane" name="clienteTabbedPane">
+                          <Properties>
+                            <Property name="tabPlacement" type="int" value="2"/>
+                          </Properties>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                           <SubComponents>
@@ -275,15 +284,81 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="cliente_idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cliente_nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cliente_correoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="cliente_idTextField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="cliente_nombreTextField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="cliente_correoTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="160" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="crearTiendaButton1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="cliente_idTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cliente_idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="cliente_nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cliente_nombreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="cliente_correoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cliente_correoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="211" max="32767" attributes="0"/>
+                                          <Component id="crearTiendaButton1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="cliente_idLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="ID:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="cliente_idTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="cliente_nombreLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="cliente_nombreTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="cliente_correoLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Correo Electr&#xf3;nico:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="cliente_correoTextField">
+                                </Component>
+                                <Component class="javax.swing.JButton" name="crearTiendaButton1">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Crear Cliente"/>
+                                  </Properties>
+                                </Component>
+                              </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="clienteModificarTab">
                               <Constraints>
@@ -345,17 +420,23 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="facturaTabbedPane" alignment="0" pref="600" max="32767" attributes="0"/>
+                              <Component id="facturaTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="facturaTabbedPane" alignment="0" pref="300" max="32767" attributes="0"/>
+                              <Component id="facturaTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
                         <Container class="javax.swing.JTabbedPane" name="facturaTabbedPane">
+                          <Properties>
+                            <Property name="tabPlacement" type="int" value="2"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Default Cursor"/>
+                            </Property>
+                          </Properties>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                           <SubComponents>
@@ -371,15 +452,148 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace pref="339" max="32767" attributes="0"/>
+                                                  <Component id="crearFacturaButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="factura_numeroLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="factura_fechaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="factura_ISVLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="factura_subtotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="factura_totalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="facturacliente_idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="facturatienda_idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="factura_totalTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="factura_fechaTextField" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="factura_ISVTextField" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="factura_subtotalTextField" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="factura_numeroTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="facturacliente_idTextField" max="32767" attributes="0"/>
+                                                          <Component id="facturatienda_idTextField" min="-2" pref="150" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="factura_numeroTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="factura_numeroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="factura_fechaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="factura_fechaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="factura_ISVLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="factura_ISVTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="factura_subtotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="factura_subtotalTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="factura_totalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="factura_totalTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="facturacliente_idTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="facturacliente_idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="facturatienda_idTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="facturatienda_idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="51" max="32767" attributes="0"/>
+                                          <Component id="crearFacturaButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="factura_numeroLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="factura_numeroTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="factura_fechaLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Fecha:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="factura_fechaTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="factura_ISVLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="ISV:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="factura_ISVTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="factura_subtotalLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Subtotal"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="factura_subtotalTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="factura_totalLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Total"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="factura_totalTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="facturacliente_idLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Cliente ID:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="facturacliente_idTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="facturatienda_idLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Tienda ID:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="facturatienda_idTextField">
+                                </Component>
+                                <Component class="javax.swing.JButton" name="crearFacturaButton">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Crear Factura"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearFacturaButtonActionPerformed"/>
+                                  </Events>
+                                </Component>
+                              </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="facturaModificarTab">
                               <Constraints>
@@ -441,17 +655,20 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="productoTabbedPane" alignment="0" pref="600" max="32767" attributes="0"/>
+                              <Component id="productoTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="productoTabbedPane" alignment="0" pref="300" max="32767" attributes="0"/>
+                              <Component id="productoTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
                         <Container class="javax.swing.JTabbedPane" name="productoTabbedPane">
+                          <Properties>
+                            <Property name="tabPlacement" type="int" value="2"/>
+                          </Properties>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                           <SubComponents>
@@ -467,15 +684,119 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="crearProductoButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="producto_codigoUPCLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_tamanoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_embalajeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_marcaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="producto_marcaTextField" max="32767" attributes="0"/>
+                                                      <Component id="producto_nombreTextField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="producto_tamanoLabelTextField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="producto_embalajeTextField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="producto_codigoUPCTextField" alignment="0" pref="150" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="146" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_codigoUPCTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_codigoUPCLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_nombreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_tamanoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_tamanoLabelTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_embalajeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_embalajeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_marcaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_marcaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="131" max="32767" attributes="0"/>
+                                          <Component id="crearProductoButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="producto_codigoUPCLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="C&#xf3;digo UPC:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_codigoUPCTextField">
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="producto_codigoUPCTextFieldActionPerformed"/>
+                                  </Events>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_nombreLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_nombreTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_tamanoLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Tama&#xf1;o:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_tamanoLabelTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_embalajeLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="M&#xe9;todo de Embalaje"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_embalajeTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_marcaLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Marca:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_marcaTextField">
+                                </Component>
+                                <Component class="javax.swing.JButton" name="crearProductoButton">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Crear Producto"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearProductoButtonActionPerformed"/>
+                                  </Events>
+                                </Component>
+                              </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="productoModificarTab">
                               <Constraints>
@@ -537,17 +858,20 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="vendedorTabbedPane" alignment="0" pref="600" max="32767" attributes="0"/>
+                              <Component id="vendedorTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="vendedorTabbedPane" alignment="0" pref="300" max="32767" attributes="0"/>
+                              <Component id="vendedorTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
                         <Container class="javax.swing.JTabbedPane" name="vendedorTabbedPane">
+                          <Properties>
+                            <Property name="tabPlacement" type="int" value="2"/>
+                          </Properties>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                           <SubComponents>
@@ -563,15 +887,70 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="crearVendedorButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="vendedor_idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="vendedor_nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="vendedor_idTextField" pref="150" max="32767" attributes="0"/>
+                                              <Component id="vendedor_nombreTextField" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="215" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="vendedor_idTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="vendedor_idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="vendedor_nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="vendedor_nombreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="251" max="32767" attributes="0"/>
+                                          <Component id="crearVendedorButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="vendedor_idLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="ID:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="vendedor_idTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="vendedor_nombreLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="vendedor_nombreTextField">
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vendedor_nombreTextFieldActionPerformed"/>
+                                  </Events>
+                                </Component>
+                                <Component class="javax.swing.JButton" name="crearVendedorButton">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Crear Vendedor"/>
+                                  </Properties>
+                                </Component>
+                              </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="vendedorModificarTab">
                               <Constraints>
@@ -674,7 +1053,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -696,7 +1075,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -718,7 +1097,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -740,7 +1119,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -762,7 +1141,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -784,7 +1163,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -806,7 +1185,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -828,7 +1207,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -849,30 +1228,15 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="userTextPrueba" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="518" max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace min="0" pref="600" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="userTextPrueba" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="378" max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="userTextPrueba">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Welcome User"/>
-          </Properties>
-        </Component>
-      </SubComponents>
     </Container>
   </NonVisualComponents>
   <Properties>
@@ -900,28 +1264,15 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="loginButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPanel9" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="previewAdminButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="previewUserButton" min="-2" pref="155" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="usernameLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="passwordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="usernameTextField" min="-2" pref="180" max="-2" attributes="0"/>
-                          <Component id="passwordTextField" min="-2" pref="180" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="previewAdminButton" max="32767" attributes="0"/>
-                  <Component id="previewUserButton" max="32767" attributes="0"/>
+                  <Component id="loginPanel" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -930,59 +1281,107 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="usernameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="usernameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="passwordTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="loginButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="previewAdminButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="previewUserButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="loginPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="previewAdminButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="previewUserButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="294" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="loginButton">
+    <Container class="javax.swing.JPanel" name="loginPanel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Log In"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButtonActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="usernameTextField">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameTextFieldActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="usernameLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Username"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="passwordTextField">
-    </Component>
-    <Component class="javax.swing.JLabel" name="passwordLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Password"/>
-      </Properties>
-    </Component>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="usernameLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="usernameTextField" min="-2" pref="180" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="passwordTextField" min="-2" pref="180" max="-2" attributes="0"/>
+                          <EmptySpace pref="22" max="32767" attributes="0"/>
+                          <Component id="loginButton" min="-2" pref="63" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="loginLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="loginLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="usernameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="usernameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="passwordTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="loginLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Log In"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="usernameLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Username:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="usernameTextField">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameTextFieldActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="passwordLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Password:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="passwordTextField">
+        </Component>
+        <Component class="javax.swing.JButton" name="loginButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Log In"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButtonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
     <Component class="javax.swing.JButton" name="previewAdminButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Preview Pantalla Admin"/>
@@ -1000,5 +1399,27 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="previewUserButtonActionPerformed"/>
       </Events>
     </Component>
+    <Container class="javax.swing.JPanel" name="jPanel9">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="263" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
   </SubComponents>
 </Form>
