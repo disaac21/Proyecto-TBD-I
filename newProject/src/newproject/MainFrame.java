@@ -5,6 +5,7 @@
  */
 package newproject;
 
+
 import com.formdev.flatlaf.FlatLightLaf;
 import com.mysql.cj.MysqlConnection;
 import java.sql.Connection;
@@ -135,11 +136,22 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
 
         adminScreen.setTitle("Admin Screen");
+        adminScreen.setBackground(new java.awt.Color(255, 255, 255));
         adminScreen.setMinimumSize(new java.awt.Dimension(600, 400));
 
+        adminTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
+
+        mantenimientoTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        mantenimientoTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
         mantenimientoTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
+        tiendaTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        tiendaTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
         tiendaTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        tiendaCrearTab.setBackground(new java.awt.Color(255, 255, 255));
 
         tienda_idLabel.setText("ID:");
 
@@ -172,7 +184,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(tienda_horarioTextField)
                     .addComponent(tienda_ubicacionTextField)
                     .addComponent(tienda_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
         tiendaCrearTabLayout.setVerticalGroup(
             tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,6 +212,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         tiendaTabbedPane.addTab("Crear", tiendaCrearTab);
 
+        tiendaModificarTab.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout tiendaModificarTabLayout = new javax.swing.GroupLayout(tiendaModificarTab);
         tiendaModificarTab.setLayout(tiendaModificarTabLayout);
         tiendaModificarTabLayout.setHorizontalGroup(
@@ -212,6 +226,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         tiendaTabbedPane.addTab("Modificar", tiendaModificarTab);
+
+        tiendaEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout tiendaEliminarTabLayout = new javax.swing.GroupLayout(tiendaEliminarTab);
         tiendaEliminarTab.setLayout(tiendaEliminarTabLayout);
@@ -239,7 +255,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         mantenimientoTabbedPane.addTab("Tienda", tiendaTab);
 
+        clienteTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        clienteTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
         clienteTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        clienteCrearTab.setBackground(new java.awt.Color(255, 255, 255));
 
         cliente_idLabel.setText("ID:");
 
@@ -264,7 +285,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(cliente_idTextField)
                     .addComponent(cliente_nombreTextField)
                     .addComponent(cliente_correoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteCrearTabLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton1)
@@ -292,6 +313,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         clienteTabbedPane.addTab("Crear", clienteCrearTab);
 
+        clienteModificarTab.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout clienteModificarTabLayout = new javax.swing.GroupLayout(clienteModificarTab);
         clienteModificarTab.setLayout(clienteModificarTabLayout);
         clienteModificarTabLayout.setHorizontalGroup(
@@ -304,6 +327,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         clienteTabbedPane.addTab("Modificar", clienteModificarTab);
+
+        clienteEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout clienteEliminarTabLayout = new javax.swing.GroupLayout(clienteEliminarTab);
         clienteEliminarTab.setLayout(clienteEliminarTabLayout);
@@ -331,8 +356,13 @@ public class MainFrame extends javax.swing.JFrame {
 
         mantenimientoTabbedPane.addTab("Cliente", clienteTab);
 
+        facturaTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        facturaTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
         facturaTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         facturaTabbedPane.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        facturaCrearTab.setBackground(new java.awt.Color(255, 255, 255));
 
         factura_numeroLabel.setText("Número:");
 
@@ -362,7 +392,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(facturaCrearTabLayout.createSequentialGroup()
                 .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, facturaCrearTabLayout.createSequentialGroup()
-                        .addContainerGap(339, Short.MAX_VALUE)
+                        .addContainerGap(343, Short.MAX_VALUE)
                         .addComponent(crearFacturaButton))
                     .addGroup(facturaCrearTabLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
@@ -426,6 +456,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         facturaTabbedPane.addTab("Crear", facturaCrearTab);
 
+        facturaModificarTab.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout facturaModificarTabLayout = new javax.swing.GroupLayout(facturaModificarTab);
         facturaModificarTab.setLayout(facturaModificarTabLayout);
         facturaModificarTabLayout.setHorizontalGroup(
@@ -438,6 +470,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         facturaTabbedPane.addTab("Modificar", facturaModificarTab);
+
+        facturaEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout facturaEliminarTabLayout = new javax.swing.GroupLayout(facturaEliminarTab);
         facturaEliminarTab.setLayout(facturaEliminarTabLayout);
@@ -465,7 +499,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         mantenimientoTabbedPane.addTab("Factura", facturaTab);
 
+        productoTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        productoTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
         productoTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        productoCrearTab.setBackground(new java.awt.Color(255, 255, 255));
 
         producto_codigoUPCLabel.setText("Código UPC:");
 
@@ -514,7 +553,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(producto_tamanoLabelTextField)
                             .addComponent(producto_embalajeTextField)
                             .addComponent(producto_codigoUPCTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
-                        .addGap(0, 146, Short.MAX_VALUE)))
+                        .addGap(0, 148, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         productoCrearTabLayout.setVerticalGroup(
@@ -547,6 +586,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         productoTabbedPane.addTab("Crear", productoCrearTab);
 
+        productoModificarTab.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout productoModificarTabLayout = new javax.swing.GroupLayout(productoModificarTab);
         productoModificarTab.setLayout(productoModificarTabLayout);
         productoModificarTabLayout.setHorizontalGroup(
@@ -559,6 +600,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         productoTabbedPane.addTab("Modificar", productoModificarTab);
+
+        productoEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout productoEliminarTabLayout = new javax.swing.GroupLayout(productoEliminarTab);
         productoEliminarTab.setLayout(productoEliminarTabLayout);
@@ -586,7 +629,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         mantenimientoTabbedPane.addTab("Producto", productoTab);
 
+        vendedorTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        vendedorTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
         vendedorTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        vendedorCrearTab.setBackground(new java.awt.Color(255, 255, 255));
 
         vendedor_idLabel.setText("ID:");
 
@@ -617,7 +665,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(vendedorCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(vendedor_idTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addComponent(vendedor_nombreTextField))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
         vendedorCrearTabLayout.setVerticalGroup(
             vendedorCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -637,6 +685,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         vendedorTabbedPane.addTab("Crear", vendedorCrearTab);
 
+        vendedorModificarTab.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout vendedorModificarTabLayout = new javax.swing.GroupLayout(vendedorModificarTab);
         vendedorModificarTab.setLayout(vendedorModificarTabLayout);
         vendedorModificarTabLayout.setHorizontalGroup(
@@ -649,6 +699,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         vendedorTabbedPane.addTab("Modificar", vendedorModificarTab);
+
+        vendedorEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout vendedorEliminarTabLayout = new javax.swing.GroupLayout(vendedorEliminarTab);
         vendedorEliminarTab.setLayout(vendedorEliminarTabLayout);
@@ -689,7 +741,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         adminTabbedPane.addTab("Mantenimiento", mantenimientoTab);
 
+        reportesTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -704,6 +761,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Inventario de Productos", jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -716,6 +775,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Compras por Cliente", jPanel2);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -730,6 +791,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Historial: Ventas por Tienda", jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -742,6 +805,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Top 20: Productos por Tienda", jPanel4);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -756,6 +821,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Top 20: Productos por País", jPanel5);
 
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -769,6 +836,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Top 5: Tiendas por Ventas Anuales", jPanel6);
 
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -781,6 +850,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Sales: Tiendas (CocaCola > Pepsi)", jPanel7);
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -828,6 +899,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         userScreen.setTitle("User Screen");
+        userScreen.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout userScreenLayout = new javax.swing.GroupLayout(userScreen.getContentPane());
         userScreen.getContentPane().setLayout(userScreenLayout);
@@ -842,8 +914,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("System Log In");
-        setResizable(false);
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        loginPanel.setBackground(new java.awt.Color(255, 255, 255));
         loginPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         loginLabel.setText("Log In");
@@ -921,6 +994,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
