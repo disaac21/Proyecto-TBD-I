@@ -17,6 +17,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JDialog;
 import javax.swing.UIManager;
+import newproject.Insertar;
+
+
 
 /**
  *
@@ -24,6 +27,9 @@ import javax.swing.UIManager;
  */
 public class MainFrame extends javax.swing.JFrame {
 
+static String user = "admin";
+static String password = "DanielVictorSerlio";
+static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.com/proyecto";
     
     public MainFrame() {
         initComponents();
@@ -162,6 +168,11 @@ public class MainFrame extends javax.swing.JFrame {
         tienda_ubicacionLabel.setText("Ubicación:");
 
         crearTiendaButton.setText("Crear Tienda");
+        crearTiendaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearTiendaButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout tiendaCrearTabLayout = new javax.swing.GroupLayout(tiendaCrearTab);
         tiendaCrearTab.setLayout(tiendaCrearTabLayout);
@@ -269,6 +280,11 @@ public class MainFrame extends javax.swing.JFrame {
         cliente_correoLabel.setText("Correo Electrónico:");
 
         crearTiendaButton1.setText("Crear Cliente");
+        crearTiendaButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearTiendaButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout clienteCrearTabLayout = new javax.swing.GroupLayout(clienteCrearTab);
         clienteCrearTab.setLayout(clienteCrearTabLayout);
@@ -887,7 +903,7 @@ public class MainFrame extends javax.swing.JFrame {
             adminScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminScreenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(adminTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)
+                .addComponent(adminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 597, Short.MAX_VALUE)
                 .addContainerGap())
         );
         adminScreenLayout.setVerticalGroup(
@@ -1084,6 +1100,35 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_vendedor_nombreTextFieldActionPerformed
 
+    private void crearTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearTiendaButtonActionPerformed
+        
+        int id = Integer.parseInt(tienda_idTextField.getText());
+        String nombre = tienda_nombreTextField.getText();
+        String horario = tienda_horarioTextField.getText();
+        
+        System.out.println(id);
+        System.out.println(nombre);
+        System.out.println(horario);
+        
+        
+        Insertar.insercionTIENDA(id, nombre, horario);
+        tienda_idTextField.setText("");
+        tienda_nombreTextField.setText("");
+        tienda_horarioTextField.setText("");
+    }//GEN-LAST:event_crearTiendaButtonActionPerformed
+
+    private void crearTiendaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearTiendaButton1ActionPerformed
+        int id = Integer.parseInt(cliente_idTextField.getText());
+        String nombre = cliente_nombreTextField.getText();
+        String correo = cliente_correoTextField.getText();
+        
+        Insertar.insercionCLIENTE(id, nombre, correo);
+        
+        cliente_idTextField.setText("");
+        cliente_nombreTextField.setText("");
+        cliente_correoTextField.setText("");
+    }//GEN-LAST:event_crearTiendaButton1ActionPerformed
+
     
     public static void main(String args[]) {
         
@@ -1103,9 +1148,7 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("bien y vos");
         
         
-        String user = "admin";
-        String password = "DanielVictorSerlio";
-        String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.com/proyecto";
+        
         Connection connection;
         Statement statement;
         ResultSet rs;
