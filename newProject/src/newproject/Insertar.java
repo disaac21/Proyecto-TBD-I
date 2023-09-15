@@ -37,7 +37,7 @@ public class Insertar {
         }
     }
 
-    public static void insercionPRODUCTO(int numero,String fecha,String isv,double subtotal,double total,int clienteid,int tiendaid){
+    public static void insercionPRODUCTO(int upc, String nombre, String tamano, String embalaje, String marca){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -49,7 +49,7 @@ public class Insertar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO PRODUCTO VALUES(" + numero + ",\'" + fecha + "\'," + isv + ","+subtotal+","+total+","+clienteid+","+tiendaid+")");
+            statement.executeUpdate("INSERT INTO PRODUCTO VALUES(" + upc + ",\'" + nombre + "\',\'" + tamano + "\',\'" + embalaje + "\', \' " + marca + " \'')");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");
