@@ -16,9 +16,63 @@ public class Insertar {
     static Connection connection;
     static Statement statement;
 //    static ResultSet rs;
+
+    public static void insercionVENDEDOR(int id,String nombre){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+//            e.printStackTrace();
+            System.out.println("error en class.forname");
+        }
+
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+            statement.executeUpdate(
+                "INSERT INTO VENDEDOR VALUES(" + id + ", \'" + nombre + "\')");
+        } catch (SQLException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("algo pasa en el insert");
+        }
+    }
+
+    public static void insercionPRODUCTO(int numero,String fecha,String isv,double subtotal,double total,int clienteid,int tiendaid){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+//            e.printStackTrace();
+            System.out.println("error en class.forname");
+        }
+
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+            statement.executeUpdate("INSERT INTO PRODUCTO VALUES(" + numero + ",\'" + fecha + "\'," + isv + ","+subtotal+","+total+","+clienteid+","+tiendaid+")");
+        } catch (SQLException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("algo pasa en el insert");
+        }
+    }
     
-    public static void insercionFACTURA(){
-        
+    public static void insercionFACTURA(int numero,String fecha,double isv,double subtotal,double total,int clienteid,int tiendaid){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+//            e.printStackTrace();
+            System.out.println("error en class.forname");
+        }
+
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+            statement.executeUpdate("INSERT INTO FACTURA VALUES(" + numero + ",\'" + fecha + "\'," + isv + ","+subtotal+","+total+","+clienteid+","+tiendaid+" )");
+        } catch (SQLException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("algo pasa en el insert");
+        }
     }
 
     public static void insercionCLIENTE(int id, String nombre, String correo) {
