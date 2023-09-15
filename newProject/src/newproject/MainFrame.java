@@ -663,6 +663,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         });
 
         crearVendedorButton.setText("Crear Vendedor");
+        crearVendedorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearVendedorButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout vendedorCrearTabLayout = new javax.swing.GroupLayout(vendedorCrearTab);
         vendedorCrearTab.setLayout(vendedorCrearTabLayout);
@@ -1085,7 +1090,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }//GEN-LAST:event_previewUserButtonActionPerformed
 
     private void crearProductoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearProductoButtonActionPerformed
-        // TODO add your handling code here:
+        int upc = Integer.parseInt(producto_codigoUPCTextField.getText());
     }//GEN-LAST:event_crearProductoButtonActionPerformed
 
     private void crearFacturaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearFacturaButtonActionPerformed
@@ -1128,6 +1133,15 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         cliente_nombreTextField.setText("");
         cliente_correoTextField.setText("");
     }//GEN-LAST:event_crearTiendaButton1ActionPerformed
+
+    private void crearVendedorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearVendedorButtonActionPerformed
+        int id = Integer.parseInt(vendedor_idTextField.getText());
+        String nombre = vendedor_nombreTextField.getText();
+        
+        Insertar.insercionVENDEDOR(id, nombre);
+        vendedor_idTextField.setText("");
+        vendedor_nombreTextField.setText("");
+    }//GEN-LAST:event_crearVendedorButtonActionPerformed
 
     
     public static void main(String args[]) {
