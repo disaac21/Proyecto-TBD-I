@@ -1091,10 +1091,39 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
     private void crearProductoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearProductoButtonActionPerformed
         int upc = Integer.parseInt(producto_codigoUPCTextField.getText());
+        String nombre = producto_nombreTextField.getText();
+        String tamano = producto_tamanoLabelTextField.getText();
+        String embalaje = producto_embalajeTextField.getText();
+        String marca = producto_marcaTextField.getText();
+
+        Insertar.insercionPRODUCTO(upc, nombre, tamano, embalaje, marca);
+
+        producto_codigoUPCTextField.setText("");
+        producto_nombreTextField.setText("");
+        producto_tamanoLabelTextField.setText("");
+        producto_embalajeTextField.setText("");
+        producto_marcaTextField.setText("");
+
     }//GEN-LAST:event_crearProductoButtonActionPerformed
 
     private void crearFacturaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearFacturaButtonActionPerformed
-        // TODO add your handling code here:
+        int numero = Integer.parseInt(factura_numeroTextField.getText());
+        String fecha = factura_fechaTextField.getText();
+        double isv = Double.parseDouble(factura_ISVTextField.getText());
+        double subtotal = Double.parseDouble(factura_subtotalTextField.getText());
+        double total = Double.parseDouble(factura_totalTextField.getText());
+        int clienteid = Integer.parseInt(facturacliente_idTextField.getText());
+        int tiendaid = Integer.parseInt(facturatienda_idTextField.getText());
+
+        Insertar.insercionFACTURA(numero, fecha, isv, subtotal, total, clienteid, tiendaid);
+
+        factura_numeroTextField.setText("");
+        factura_fechaTextField.setText("");
+        factura_ISVTextField.setText("");
+        factura_subtotalTextField.setText("");
+        factura_totalTextField.setText("");
+        facturacliente_idTextField.setText("");
+        facturatienda_idTextField.setText("");
     }//GEN-LAST:event_crearFacturaButtonActionPerformed
 
     private void producto_codigoUPCTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_producto_codigoUPCTextFieldActionPerformed
