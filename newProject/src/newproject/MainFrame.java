@@ -38,11 +38,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         this.pack();//tamaño más grande
         this.setAlwaysOnTop(true);
         this.setLocationRelativeTo(this); //posición
-        
-        Reportes.inventarioPRODUCTOS(InventarioDeProductosTable);
     }
-
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -124,17 +120,16 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         vendedorModificarTab = new javax.swing.JPanel();
         vendedorEliminarTab = new javax.swing.JPanel();
         reportesTab = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        InventarioDeProductosTable = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        compras_por_cliente = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        tabla_clientes = new javax.swing.JTable();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tabla_compras = new javax.swing.JTable();
+        reportesTabbedPane = new javax.swing.JTabbedPane();
+        inventarioProductosTab = new javax.swing.JPanel();
+        inventarioProductosScrollPane = new javax.swing.JScrollPane();
+        inventarioProductosTable = new javax.swing.JTable();
+        refreshInventarioProductosButton = new javax.swing.JButton();
+        comprasClienteTab = new javax.swing.JPanel();
+        comprasClienteScrollPane = new javax.swing.JScrollPane();
+        comprasClienteTable = new javax.swing.JTable();
+        comprasClienteButton = new javax.swing.JButton();
+        comprasClienteComboBox = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -158,6 +153,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         adminScreen.setMinimumSize(new java.awt.Dimension(600, 400));
 
         adminTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
+        adminTabbedPane.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                adminTabbedPaneStateChanged(evt);
+            }
+        });
 
         mantenimientoTab.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -207,7 +207,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                     .addComponent(tienda_horarioTextField)
                     .addComponent(tienda_ubicacionTextField)
                     .addComponent(tienda_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(492, Short.MAX_VALUE))
         );
         tiendaCrearTabLayout.setVerticalGroup(
             tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,7 +228,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tienda_ubicacionLabel)
                     .addComponent(tienda_ubicacionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 277, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton)
                 .addContainerGap())
         );
@@ -313,7 +313,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                     .addComponent(cliente_idTextField)
                     .addComponent(cliente_nombreTextField)
                     .addComponent(cliente_correoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(447, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteCrearTabLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton1)
@@ -334,7 +334,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(clienteCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cliente_correoLabel)
                     .addComponent(cliente_correoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 245, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 317, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton1)
                 .addContainerGap())
         );
@@ -420,7 +420,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             .addGroup(facturaCrearTabLayout.createSequentialGroup()
                 .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, facturaCrearTabLayout.createSequentialGroup()
-                        .addContainerGap(343, Short.MAX_VALUE)
+                        .addContainerGap(626, Short.MAX_VALUE)
                         .addComponent(crearFacturaButton))
                     .addGroup(facturaCrearTabLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
@@ -477,7 +477,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(facturatienda_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(facturatienda_idLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
                 .addComponent(crearFacturaButton)
                 .addContainerGap())
         );
@@ -581,7 +581,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                             .addComponent(producto_tamanoLabelTextField)
                             .addComponent(producto_embalajeTextField)
                             .addComponent(producto_codigoUPCTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
-                        .addGap(0, 148, Short.MAX_VALUE)))
+                        .addGap(0, 433, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         productoCrearTabLayout.setVerticalGroup(
@@ -607,7 +607,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(producto_marcaLabel)
                     .addComponent(producto_marcaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
                 .addComponent(crearProductoButton)
                 .addContainerGap())
         );
@@ -698,7 +698,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(vendedorCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(vendedor_idTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addComponent(vendedor_nombreTextField))
-                .addContainerGap(218, Short.MAX_VALUE))
+                .addContainerGap(502, Short.MAX_VALUE))
         );
         vendedorCrearTabLayout.setVerticalGroup(
             vendedorCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -711,7 +711,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(vendedorCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vendedor_nombreLabel)
                     .addComponent(vendedor_nombreTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 285, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 357, Short.MAX_VALUE)
                 .addComponent(crearVendedorButton)
                 .addContainerGap())
         );
@@ -776,12 +776,17 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         reportesTab.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        reportesTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
+        reportesTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        reportesTabbedPane.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                reportesTabbedPaneStateChanged(evt);
+            }
+        });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        inventarioProductosTab.setBackground(new java.awt.Color(255, 255, 255));
 
-        InventarioDeProductosTable.setModel(new javax.swing.table.DefaultTableModel(
+        inventarioProductosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -792,48 +797,42 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 "UPC", "Nombre", "Tamaño", "Embalaje", "Marca"
             }
         ));
-        jScrollPane2.setViewportView(InventarioDeProductosTable);
+        inventarioProductosScrollPane.setViewportView(inventarioProductosTable);
 
-        jButton1.setText("Refresh");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        refreshInventarioProductosButton.setText("Refresh");
+        refreshInventarioProductosButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                refreshInventarioProductosButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout inventarioProductosTabLayout = new javax.swing.GroupLayout(inventarioProductosTab);
+        inventarioProductosTab.setLayout(inventarioProductosTabLayout);
+        inventarioProductosTabLayout.setHorizontalGroup(
+            inventarioProductosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(inventarioProductosTabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(inventarioProductosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(inventarioProductosScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
+                    .addGroup(inventarioProductosTabLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(refreshInventarioProductosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        inventarioProductosTabLayout.setVerticalGroup(
+            inventarioProductosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(inventarioProductosTabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(inventarioProductosScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(refreshInventarioProductosButton)
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Inventario de Productos", jPanel1);
+        reportesTabbedPane.addTab("Inventario de Productos", inventarioProductosTab);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        comprasClienteTab.setBackground(new java.awt.Color(255, 255, 255));
 
-        compras_por_cliente.setText("Ver Compras");
-        compras_por_cliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                compras_por_clienteActionPerformed(evt);
-            }
-        });
-
-        tabla_clientes.setModel(new javax.swing.table.DefaultTableModel(
+        comprasClienteTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -844,46 +843,48 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane4.setViewportView(tabla_clientes);
+        comprasClienteScrollPane.setViewportView(comprasClienteTable);
 
-        tabla_compras.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+        comprasClienteButton.setText("Ver Compras");
+        comprasClienteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprasClienteButtonActionPerformed(evt);
             }
-        ));
-        jScrollPane3.setViewportView(tabla_compras);
+        });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        comprasClienteComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                comprasClienteComboBoxItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout comprasClienteTabLayout = new javax.swing.GroupLayout(comprasClienteTab);
+        comprasClienteTab.setLayout(comprasClienteTabLayout);
+        comprasClienteTabLayout.setHorizontalGroup(
+            comprasClienteTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(comprasClienteTabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(compras_por_cliente)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(compras_por_cliente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addGroup(comprasClienteTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comprasClienteScrollPane)
+                    .addGroup(comprasClienteTabLayout.createSequentialGroup()
+                        .addComponent(comprasClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                        .addComponent(comprasClienteButton)))
                 .addContainerGap())
         );
+        comprasClienteTabLayout.setVerticalGroup(
+            comprasClienteTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(comprasClienteTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(comprasClienteTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(comprasClienteComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(comprasClienteButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(comprasClienteScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
+        );
 
-        jTabbedPane1.addTab("Compras por Cliente", jPanel2);
+        reportesTabbedPane.addTab("Compras por Cliente", comprasClienteTab);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -891,14 +892,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 373, Short.MAX_VALUE)
+            .addGap(0, 654, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 461, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Historial: Ventas por Tienda", jPanel3);
+        reportesTabbedPane.addTab("Historial: Ventas por Tienda", jPanel3);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -906,14 +907,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 373, Short.MAX_VALUE)
+            .addGap(0, 654, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 461, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Top 20: Productos por Tienda", jPanel4);
+        reportesTabbedPane.addTab("Top 20: Productos por Tienda", jPanel4);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -921,14 +922,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 373, Short.MAX_VALUE)
+            .addGap(0, 654, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 461, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Top 20: Productos por País", jPanel5);
+        reportesTabbedPane.addTab("Top 20: Productos por País", jPanel5);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -936,14 +937,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 373, Short.MAX_VALUE)
+            .addGap(0, 654, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 461, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Top 5: Tiendas por Ventas Anuales", jPanel6);
+        reportesTabbedPane.addTab("Top 5: Tiendas por Ventas Anuales", jPanel6);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -951,14 +952,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 373, Short.MAX_VALUE)
+            .addGap(0, 654, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 461, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Sales: Tiendas (CocaCola > Pepsi)", jPanel7);
+        reportesTabbedPane.addTab("Sales: Tiendas (CocaCola > Pepsi)", jPanel7);
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -966,26 +967,26 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 373, Short.MAX_VALUE)
+            .addGap(0, 654, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 461, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Top 3 Sales: Productos (Menos Leche)", jPanel8);
+        reportesTabbedPane.addTab("Top 3 Sales: Productos (Menos Leche)", jPanel8);
 
         javax.swing.GroupLayout reportesTabLayout = new javax.swing.GroupLayout(reportesTab);
         reportesTab.setLayout(reportesTabLayout);
         reportesTabLayout.setHorizontalGroup(
             reportesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(reportesTabLayout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(reportesTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         reportesTabLayout.setVerticalGroup(
             reportesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(reportesTabbedPane)
         );
 
         adminTabbedPane.addTab("Reportes", reportesTab);
@@ -996,7 +997,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             adminScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminScreenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(adminTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)
+                .addComponent(adminTabbedPane)
                 .addContainerGap())
         );
         adminScreenLayout.setVerticalGroup(
@@ -1197,9 +1198,13 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private void crearFacturaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearFacturaButtonActionPerformed
         int numero = Integer.parseInt(factura_numeroTextField.getText());
         String fecha = factura_fechaTextField.getText();
-        double isv = Double.parseDouble(factura_ISVTextField.getText());
         double subtotal = Double.parseDouble(factura_subtotalTextField.getText());
-        double total = Double.parseDouble(factura_totalTextField.getText());
+        
+        double isv = subtotal * 0.15;
+        
+        
+        double total = subtotal + isv;
+        
         int clienteid = Integer.parseInt(facturacliente_idTextField.getText());
         int tiendaid = Integer.parseInt(facturatienda_idTextField.getText());
 
@@ -1207,7 +1212,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         factura_numeroTextField.setText("");
         factura_fechaTextField.setText("");
-        factura_ISVTextField.setText("");
+        //factura_ISVTextField.setText("");
         factura_subtotalTextField.setText("");
         factura_totalTextField.setText("");
         facturacliente_idTextField.setText("");
@@ -1260,14 +1265,28 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         vendedor_nombreTextField.setText("");
     }//GEN-LAST:event_crearVendedorButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Reportes.inventarioPRODUCTOS(InventarioDeProductosTable);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void refreshInventarioProductosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshInventarioProductosButtonActionPerformed
+        Reportes.inventarioProductos(inventarioProductosTable);
+    }//GEN-LAST:event_refreshInventarioProductosButtonActionPerformed
 
-    private void compras_por_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compras_por_clienteActionPerformed
-        int selectedrow = tabla_clientes.getSelectedRow();
-        tabla_clientes.getModel();
-    }//GEN-LAST:event_compras_por_clienteActionPerformed
+    private void comprasClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprasClienteButtonActionPerformed
+        Reportes.comprasCliente(comprasClienteTable, comprasClienteComboBox);
+    }//GEN-LAST:event_comprasClienteButtonActionPerformed
+
+    private void reportesTabbedPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_reportesTabbedPaneStateChanged
+        
+    }//GEN-LAST:event_reportesTabbedPaneStateChanged
+
+    private void comprasClienteComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comprasClienteComboBoxItemStateChanged
+        
+    }//GEN-LAST:event_comprasClienteComboBoxItemStateChanged
+
+    private void adminTabbedPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_adminTabbedPaneStateChanged
+        Reportes.inventarioProductos(inventarioProductosTable);
+
+        comprasClienteComboBox.removeAllItems();
+        Reportes.comprasClienteComboBox(comprasClienteComboBox);
+    }//GEN-LAST:event_adminTabbedPaneStateChanged
 
     
     public static void main(String args[]) {
@@ -1314,7 +1333,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable InventarioDeProductosTable;
     private javax.swing.JDialog adminScreen;
     private javax.swing.JTabbedPane adminTabbedPane;
     private javax.swing.JPanel clienteCrearTab;
@@ -1328,7 +1346,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JTextField cliente_idTextField;
     private javax.swing.JLabel cliente_nombreLabel;
     private javax.swing.JTextField cliente_nombreTextField;
-    private javax.swing.JButton compras_por_cliente;
+    private javax.swing.JButton comprasClienteButton;
+    private javax.swing.JComboBox<String> comprasClienteComboBox;
+    private javax.swing.JScrollPane comprasClienteScrollPane;
+    private javax.swing.JPanel comprasClienteTab;
+    private javax.swing.JTable comprasClienteTable;
     private javax.swing.JButton crearFacturaButton;
     private javax.swing.JButton crearProductoButton;
     private javax.swing.JButton crearTiendaButton;
@@ -1353,9 +1375,9 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JTextField facturacliente_idTextField;
     private javax.swing.JLabel facturatienda_idLabel;
     private javax.swing.JTextField facturatienda_idTextField;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane inventarioProductosScrollPane;
+    private javax.swing.JPanel inventarioProductosTab;
+    private javax.swing.JTable inventarioProductosTable;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -1363,11 +1385,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton loginButton;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel loginPanel;
@@ -1392,9 +1409,9 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JTextField producto_nombreTextField;
     private javax.swing.JLabel producto_tamanoLabel;
     private javax.swing.JTextField producto_tamanoLabelTextField;
+    private javax.swing.JButton refreshInventarioProductosButton;
     private javax.swing.JPanel reportesTab;
-    private javax.swing.JTable tabla_clientes;
-    private javax.swing.JTable tabla_compras;
+    private javax.swing.JTabbedPane reportesTabbedPane;
     private javax.swing.JPanel tiendaCrearTab;
     private javax.swing.JPanel tiendaEliminarTab;
     private javax.swing.JPanel tiendaModificarTab;
