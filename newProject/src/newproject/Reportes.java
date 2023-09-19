@@ -136,4 +136,76 @@ public class Reportes {
         }
         
     }
+    
+    public static void ventasTiendaComboBox(JComboBox ComboBoxTiendas) {
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+                        
+            String query = "SELECT id, nombre FROM TIENDA";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            
+            while (resultSet.next()) {
+                String tiendaID = resultSet.getString("id");
+                String tiendaName = resultSet.getString("nombre");
+                String tiendaCB = (tiendaID + " - " + tiendaName);
+                
+                ComboBoxTiendas.addItem(tiendaCB);
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
+        }
+    }
+    
+    public static void ventasTienda(JTable ventasTiendaTable, JComboBox ComboBoxTiendas) {
+        //numero fecha isv subtotal total cliente_id tienda_id
+        
+        //Captura Modelo
+        DefaultTableModel model = new DefaultTableModel();
+        TableRowSorter<TableModel> ordenar = new TableRowSorter<TableModel>(model);
+        ventasTiendaTable.setRowSorter(ordenar);
+
+        //Agrega Columnas
+        model.addColumn("Número"); model.addColumn("Fecha"); model.addColumn("ISV");
+        model.addColumn("Subtotal"); model.addColumn("Total"); model.addColumn("Cliente ID");
+        model.addColumn("Tienda ID");
+        
+
+        //Regresa Modelo
+        ventasTiendaTable.setModel(model);
+
+        //Llena Datos
+        String[] datos = new String[7];
+        String nombreVista = "ventasTienda";
+        String sql = "SELECT * FROM " + nombreVista + ";";
+        String idFiltrar = ComboBoxTiendas.getSelectedItem().toString().substring(0, ComboBoxTiendas.getSelectedItem().toString().indexOf('-')-1);
+
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                datos[5] = rs.getString(6);
+                datos[6] = rs.getString(7);
+                
+                if (datos[6].equals(idFiltrar)) {
+                    model.addRow(datos);
+                }
+            }
+           
+            ventasTiendaTable.setModel(model);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
+        }
+        
+    }
 }
