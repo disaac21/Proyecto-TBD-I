@@ -85,7 +85,17 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         cliente_correoTextField = new javax.swing.JTextField();
         crearTiendaButton1 = new javax.swing.JButton();
         clienteModificarTab = new javax.swing.JPanel();
+        cliente_idLabel1 = new javax.swing.JLabel();
+        cliente_nombreLabel1 = new javax.swing.JLabel();
+        cliente_nombreTextField1 = new javax.swing.JTextField();
+        cliente_correoLabel1 = new javax.swing.JLabel();
+        cliente_correoTextField1 = new javax.swing.JTextField();
+        crearTiendaButton2 = new javax.swing.JButton();
+        modificarClienteComboBox = new javax.swing.JComboBox<>();
         clienteEliminarTab = new javax.swing.JPanel();
+        tienda_idLabel3 = new javax.swing.JLabel();
+        eliminarClienteComboBox = new javax.swing.JComboBox<>();
+        eliminarClienteButton = new javax.swing.JButton();
         facturaTab = new javax.swing.JPanel();
         facturaTabbedPane = new javax.swing.JTabbedPane();
         facturaCrearTab = new javax.swing.JPanel();
@@ -454,30 +464,111 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         clienteModificarTab.setBackground(new java.awt.Color(255, 255, 255));
 
+        cliente_idLabel1.setText("ID:");
+
+        cliente_nombreLabel1.setText("Nombre:");
+
+        cliente_correoLabel1.setText("Correo Electrónico:");
+
+        crearTiendaButton2.setText("Modificar Cliente");
+        crearTiendaButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearTiendaButton2ActionPerformed(evt);
+            }
+        });
+
+        modificarClienteComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                modificarClienteComboBoxItemStateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout clienteModificarTabLayout = new javax.swing.GroupLayout(clienteModificarTab);
         clienteModificarTab.setLayout(clienteModificarTabLayout);
         clienteModificarTabLayout.setHorizontalGroup(
             clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(clienteModificarTabLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cliente_idLabel1)
+                    .addComponent(cliente_nombreLabel1)
+                    .addComponent(cliente_correoLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(cliente_nombreTextField1)
+                        .addComponent(cliente_correoTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(modificarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(247, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteModificarTabLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(crearTiendaButton2)
+                .addContainerGap())
         );
         clienteModificarTabLayout.setVerticalGroup(
             clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(clienteModificarTabLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addGroup(clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cliente_idLabel1)
+                    .addComponent(modificarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cliente_nombreLabel1)
+                    .addComponent(cliente_nombreTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cliente_correoLabel1)
+                    .addComponent(cliente_correoTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 311, Short.MAX_VALUE)
+                .addComponent(crearTiendaButton2)
+                .addContainerGap())
         );
 
         clienteTabbedPane.addTab("Modificar", clienteModificarTab);
 
         clienteEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
 
+        tienda_idLabel3.setText("ID:");
+
+        eliminarClienteComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                eliminarClienteComboBoxItemStateChanged(evt);
+            }
+        });
+
+        eliminarClienteButton.setText("Eliminar Cliente");
+        eliminarClienteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarClienteButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout clienteEliminarTabLayout = new javax.swing.GroupLayout(clienteEliminarTab);
         clienteEliminarTab.setLayout(clienteEliminarTabLayout);
         clienteEliminarTabLayout.setHorizontalGroup(
             clienteEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteEliminarTabLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(eliminarClienteButton)
+                .addContainerGap())
+            .addGroup(clienteEliminarTabLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(tienda_idLabel3)
+                .addGap(59, 59, 59)
+                .addComponent(eliminarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(294, Short.MAX_VALUE))
         );
         clienteEliminarTabLayout.setVerticalGroup(
             clienteEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteEliminarTabLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(clienteEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tienda_idLabel3)
+                    .addComponent(eliminarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 385, Short.MAX_VALUE)
+                .addComponent(eliminarClienteButton)
+                .addContainerGap())
         );
 
         clienteTabbedPane.addTab("Eliminar", clienteEliminarTab);
@@ -1442,6 +1533,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         eliminarTiendaComboBox.removeAllItems();
         Reportes.ventasTiendaComboBox(eliminarTiendaComboBox);
         
+        modificarClienteComboBox.removeAllItems();
+        Reportes.comprasClienteComboBox(modificarClienteComboBox);
+        eliminarClienteComboBox.removeAllItems();
+        Reportes.comprasClienteComboBox(eliminarClienteComboBox);
+        
         
         //Reportes
         comprasClienteComboBox.removeAllItems();
@@ -1477,6 +1573,22 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private void eliminarTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarTiendaButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_eliminarTiendaButtonActionPerformed
+
+    private void crearTiendaButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearTiendaButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crearTiendaButton2ActionPerformed
+
+    private void modificarClienteComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_modificarClienteComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarClienteComboBoxItemStateChanged
+
+    private void eliminarClienteComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_eliminarClienteComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eliminarClienteComboBoxItemStateChanged
+
+    private void eliminarClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarClienteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eliminarClienteButtonActionPerformed
 
     
     public static void main(String args[]) {
@@ -1531,11 +1643,16 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel clienteTab;
     private javax.swing.JTabbedPane clienteTabbedPane;
     private javax.swing.JLabel cliente_correoLabel;
+    private javax.swing.JLabel cliente_correoLabel1;
     private javax.swing.JTextField cliente_correoTextField;
+    private javax.swing.JTextField cliente_correoTextField1;
     private javax.swing.JLabel cliente_idLabel;
+    private javax.swing.JLabel cliente_idLabel1;
     private javax.swing.JTextField cliente_idTextField;
     private javax.swing.JLabel cliente_nombreLabel;
+    private javax.swing.JLabel cliente_nombreLabel1;
     private javax.swing.JTextField cliente_nombreTextField;
+    private javax.swing.JTextField cliente_nombreTextField1;
     private javax.swing.JButton comprasClienteButton;
     private javax.swing.JComboBox<String> comprasClienteComboBox;
     private javax.swing.JScrollPane comprasClienteScrollPane;
@@ -1545,7 +1662,10 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JButton crearProductoButton;
     private javax.swing.JButton crearTiendaButton;
     private javax.swing.JButton crearTiendaButton1;
+    private javax.swing.JButton crearTiendaButton2;
     private javax.swing.JButton crearVendedorButton;
+    private javax.swing.JButton eliminarClienteButton;
+    private javax.swing.JComboBox<String> eliminarClienteComboBox;
     private javax.swing.JButton eliminarTiendaButton;
     private javax.swing.JComboBox<String> eliminarTiendaComboBox;
     private javax.swing.JPanel facturaCrearTab;
@@ -1581,6 +1701,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel loginPanel;
     private javax.swing.JPanel mantenimientoTab;
     private javax.swing.JTabbedPane mantenimientoTabbedPane;
+    private javax.swing.JComboBox<String> modificarClienteComboBox;
     private javax.swing.JButton modificarTiendaButton;
     private javax.swing.JComboBox<String> modificarTiendaComboBox;
     private javax.swing.JLabel passwordLabel;
@@ -1617,6 +1738,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JLabel tienda_idLabel;
     private javax.swing.JLabel tienda_idLabel1;
     private javax.swing.JLabel tienda_idLabel2;
+    private javax.swing.JLabel tienda_idLabel3;
     private javax.swing.JTextField tienda_idTextField;
     private javax.swing.JLabel tienda_nombreLabel;
     private javax.swing.JLabel tienda_nombreLabel1;
