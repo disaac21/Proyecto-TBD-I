@@ -29,6 +29,7 @@ public class Insertar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
+            
             statement.executeUpdate(
                 "INSERT INTO VENDEDOR VALUES(" + id + ", \'" + nombre + "\')");
         } catch (SQLException ex) {
@@ -68,7 +69,8 @@ public class Insertar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO FACTURA VALUES(" + numero + ",\'" + fecha + "\'," + isv + ","+subtotal+","+total+","+clienteid+","+tiendaid+" )");
+            statement.executeQuery("call CrearFactura("+numero+", \'"+fecha+"\', "+isv+", "+subtotal+", "+total+", "+clienteid+", "+tiendaid+")");
+            //statement.executeUpdate("INSERT INTO FACTURA VALUES(" + numero + ",\'" + fecha + "\'," + isv + ","+subtotal+","+total+","+clienteid+","+tiendaid+" )");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");
@@ -87,7 +89,7 @@ public class Insertar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO CLIENTE VALUES(" + id + ", \'" + nombre + "\', \'" + correo + "\')");
+            statement.executeUpdate("CALL CrearCliente("+id+", \' "+ nombre +" \', \' "+ correo +"  \'  )");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");
@@ -108,7 +110,8 @@ public class Insertar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO TIENDA VALUES(" + id + ", \'" + nombre + "\', \'" + horario + "\')");
+            statement.executeQuery("call CrearTienda("+ id +", \'"+nombre+"\', \'"+horario+"\');");
+            //statement.executeUpdate("INSERT INTO TIENDA VALUES(" + id + ", \'" + nombre + "\', \'" + horario + "\')");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");

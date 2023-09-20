@@ -41,7 +41,7 @@ public class Reportes {
         //Llena Datos
         String[] datos = new String[5];
         String nombreVista = "inventarioProductos";
-        String sql = "SELECT * FROM " + nombreVista + ";";
+        String sql = "SELECT * FROM proyecto.inventarioProductos;";
 
         try {
             connection = DriverManager.getConnection(url, user, password);
