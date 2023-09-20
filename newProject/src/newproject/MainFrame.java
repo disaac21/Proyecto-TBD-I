@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.UIManager;
 import javax.swing.table.TableModel;
@@ -60,7 +61,19 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         tienda_ubicacionTextField = new javax.swing.JTextField();
         crearTiendaButton = new javax.swing.JButton();
         tiendaModificarTab = new javax.swing.JPanel();
+        tienda_idLabel1 = new javax.swing.JLabel();
+        modificarTiendaComboBox = new javax.swing.JComboBox<>();
+        tienda_nombreLabel1 = new javax.swing.JLabel();
+        tienda_nombreTextField1 = new javax.swing.JTextField();
+        tienda_horarioLabel1 = new javax.swing.JLabel();
+        tienda_horarioTextField1 = new javax.swing.JTextField();
+        tienda_ubicacionLabel1 = new javax.swing.JLabel();
+        tienda_ubicacionTextField1 = new javax.swing.JTextField();
+        modificarTiendaButton = new javax.swing.JButton();
         tiendaEliminarTab = new javax.swing.JPanel();
+        tienda_idLabel2 = new javax.swing.JLabel();
+        eliminarTiendaComboBox = new javax.swing.JComboBox<>();
+        eliminarTiendaButton = new javax.swing.JButton();
         clienteTab = new javax.swing.JPanel();
         clienteTabbedPane = new javax.swing.JTabbedPane();
         clienteCrearTab = new javax.swing.JPanel();
@@ -172,6 +185,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         tiendaTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
         tiendaTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        tiendaTabbedPane.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                tiendaTabbedPaneStateChanged(evt);
+            }
+        });
 
         tiendaCrearTab.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -211,7 +229,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                     .addComponent(tienda_horarioTextField)
                     .addComponent(tienda_ubicacionTextField)
                     .addComponent(tienda_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(492, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         tiendaCrearTabLayout.setVerticalGroup(
             tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -241,30 +259,119 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         tiendaModificarTab.setBackground(new java.awt.Color(255, 255, 255));
 
+        tienda_idLabel1.setText("ID:");
+
+        modificarTiendaComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                modificarTiendaComboBoxItemStateChanged(evt);
+            }
+        });
+
+        tienda_nombreLabel1.setText("Nombre:");
+
+        tienda_horarioLabel1.setText("Horario:");
+
+        tienda_ubicacionLabel1.setText("Ubicación:");
+
+        modificarTiendaButton.setText("Modificar Tienda");
+        modificarTiendaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarTiendaButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout tiendaModificarTabLayout = new javax.swing.GroupLayout(tiendaModificarTab);
         tiendaModificarTab.setLayout(tiendaModificarTabLayout);
         tiendaModificarTabLayout.setHorizontalGroup(
             tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tiendaModificarTabLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(modificarTiendaButton)
+                .addContainerGap())
+            .addGroup(tiendaModificarTabLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tienda_idLabel1)
+                    .addComponent(tienda_nombreLabel1)
+                    .addComponent(tienda_horarioLabel1)
+                    .addComponent(tienda_ubicacionLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(tienda_nombreTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                        .addComponent(tienda_horarioTextField1)
+                        .addComponent(tienda_ubicacionTextField1))
+                    .addComponent(modificarTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         tiendaModificarTabLayout.setVerticalGroup(
             tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(tiendaModificarTabLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addGroup(tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tienda_idLabel1)
+                    .addComponent(modificarTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tienda_nombreLabel1)
+                    .addComponent(tienda_nombreTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tienda_horarioLabel1)
+                    .addComponent(tienda_horarioTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tienda_ubicacionLabel1)
+                    .addComponent(tienda_ubicacionTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 271, Short.MAX_VALUE)
+                .addComponent(modificarTiendaButton)
+                .addContainerGap())
         );
 
         tiendaTabbedPane.addTab("Modificar", tiendaModificarTab);
 
         tiendaEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
 
+        tienda_idLabel2.setText("ID:");
+
+        eliminarTiendaComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                eliminarTiendaComboBoxItemStateChanged(evt);
+            }
+        });
+
+        eliminarTiendaButton.setText("Eliminar Tienda");
+        eliminarTiendaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarTiendaButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout tiendaEliminarTabLayout = new javax.swing.GroupLayout(tiendaEliminarTab);
         tiendaEliminarTab.setLayout(tiendaEliminarTabLayout);
         tiendaEliminarTabLayout.setHorizontalGroup(
             tiendaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tiendaEliminarTabLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(eliminarTiendaButton)
+                .addContainerGap())
+            .addGroup(tiendaEliminarTabLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(tienda_idLabel2)
+                .addGap(59, 59, 59)
+                .addComponent(eliminarTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(294, Short.MAX_VALUE))
         );
         tiendaEliminarTabLayout.setVerticalGroup(
             tiendaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tiendaEliminarTabLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(tiendaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tienda_idLabel2)
+                    .addComponent(eliminarTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 385, Short.MAX_VALUE)
+                .addComponent(eliminarTiendaButton)
+                .addContainerGap())
         );
 
         tiendaTabbedPane.addTab("Eliminar", tiendaEliminarTab);
@@ -1328,7 +1435,15 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
     private void adminTabbedPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_adminTabbedPaneStateChanged
         Reportes.inventarioProductos(inventarioProductosTable);
-
+        
+        //Mantenimiento
+        modificarTiendaComboBox.removeAllItems();
+        Reportes.ventasTiendaComboBox(modificarTiendaComboBox);
+        eliminarTiendaComboBox.removeAllItems();
+        Reportes.ventasTiendaComboBox(eliminarTiendaComboBox);
+        
+        
+        //Reportes
         comprasClienteComboBox.removeAllItems();
         Reportes.comprasClienteComboBox(comprasClienteComboBox);
         ventasTiendaComboBox.removeAllItems();
@@ -1342,6 +1457,26 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private void ventasTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasTiendaButtonActionPerformed
         Reportes.ventasTienda(ventasTiendaTable, ventasTiendaComboBox);
     }//GEN-LAST:event_ventasTiendaButtonActionPerformed
+
+    private void modificarTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarTiendaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarTiendaButtonActionPerformed
+
+    private void modificarTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_modificarTiendaComboBoxItemStateChanged
+        
+    }//GEN-LAST:event_modificarTiendaComboBoxItemStateChanged
+
+    private void tiendaTabbedPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tiendaTabbedPaneStateChanged
+        
+    }//GEN-LAST:event_tiendaTabbedPaneStateChanged
+
+    private void eliminarTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_eliminarTiendaComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eliminarTiendaComboBoxItemStateChanged
+
+    private void eliminarTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarTiendaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eliminarTiendaButtonActionPerformed
 
     
     public static void main(String args[]) {
@@ -1411,6 +1546,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JButton crearTiendaButton;
     private javax.swing.JButton crearTiendaButton1;
     private javax.swing.JButton crearVendedorButton;
+    private javax.swing.JButton eliminarTiendaButton;
+    private javax.swing.JComboBox<String> eliminarTiendaComboBox;
     private javax.swing.JPanel facturaCrearTab;
     private javax.swing.JPanel facturaEliminarTab;
     private javax.swing.JPanel facturaModificarTab;
@@ -1444,6 +1581,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel loginPanel;
     private javax.swing.JPanel mantenimientoTab;
     private javax.swing.JTabbedPane mantenimientoTabbedPane;
+    private javax.swing.JButton modificarTiendaButton;
+    private javax.swing.JComboBox<String> modificarTiendaComboBox;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JTextField passwordTextField;
     private javax.swing.JButton previewAdminButton;
@@ -1472,13 +1611,21 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel tiendaTab;
     private javax.swing.JTabbedPane tiendaTabbedPane;
     private javax.swing.JLabel tienda_horarioLabel;
+    private javax.swing.JLabel tienda_horarioLabel1;
     private javax.swing.JTextField tienda_horarioTextField;
+    private javax.swing.JTextField tienda_horarioTextField1;
     private javax.swing.JLabel tienda_idLabel;
+    private javax.swing.JLabel tienda_idLabel1;
+    private javax.swing.JLabel tienda_idLabel2;
     private javax.swing.JTextField tienda_idTextField;
     private javax.swing.JLabel tienda_nombreLabel;
+    private javax.swing.JLabel tienda_nombreLabel1;
     private javax.swing.JTextField tienda_nombreTextField;
+    private javax.swing.JTextField tienda_nombreTextField1;
     private javax.swing.JLabel tienda_ubicacionLabel;
+    private javax.swing.JLabel tienda_ubicacionLabel1;
     private javax.swing.JTextField tienda_ubicacionTextField;
+    private javax.swing.JTextField tienda_ubicacionTextField1;
     private javax.swing.JDialog userScreen;
     private javax.swing.JLabel usernameLabel;
     private javax.swing.JTextField usernameTextField;
