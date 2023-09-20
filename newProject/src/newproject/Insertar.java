@@ -30,8 +30,7 @@ public class Insertar {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
             
-            statement.executeUpdate(
-                "INSERT INTO VENDEDOR VALUES(" + id + ", \'" + nombre + "\')");
+            statement.executeQuery("call CrearVendedor("+id+", \'"+nombre+"\')");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");
@@ -50,7 +49,8 @@ public class Insertar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO PRODUCTO VALUES(" + upc + ",\'" + nombre + "\',\'" + tamano + "\',\'" + embalaje + "\', \' " + marca + " \')");
+            statement.executeQuery("call CrearProducto("+upc+", \'"+nombre+"\', \'"+tamano+"\', \'"+embalaje+"\', \'"+marca+"\' )");
+            //statement.executeUpdate("INSERT INTO PRODUCTO VALUES(" + upc + ",\'" + nombre + "\',\'" + tamano + "\',\'" + embalaje + "\', \' " + marca + " \')");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");
