@@ -186,7 +186,7 @@
                                               <Component id="tienda_ubicacionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="tienda_ubicacionTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="277" max="32767" attributes="0"/>
+                                          <EmptySpace pref="279" max="32767" attributes="0"/>
                                           <Component id="crearTiendaButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -298,7 +298,7 @@
                                               <Component id="tienda_ubicacionLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="tienda_ubicacionTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="271" max="32767" attributes="0"/>
+                                          <EmptySpace pref="273" max="32767" attributes="0"/>
                                           <Component id="modificarTiendaButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -377,7 +377,7 @@
                                           <Component id="tienda_idLabel2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarTiendaComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="294" max="32767" attributes="0"/>
+                                          <EmptySpace pref="313" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -389,7 +389,7 @@
                                               <Component id="tienda_idLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="eliminarTiendaComboBox" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="385" max="32767" attributes="0"/>
+                                          <EmptySpace pref="387" max="32767" attributes="0"/>
                                           <Component id="eliminarTiendaButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -491,7 +491,7 @@
                                               <Component id="cliente_nombreTextField" alignment="0" max="32767" attributes="0"/>
                                               <Component id="cliente_correoTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="447" max="32767" attributes="0"/>
+                                          <EmptySpace pref="466" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
@@ -518,7 +518,7 @@
                                               <Component id="cliente_correoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="cliente_correoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="317" max="32767" attributes="0"/>
+                                          <EmptySpace pref="319" max="32767" attributes="0"/>
                                           <Component id="crearTiendaButton1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -589,7 +589,7 @@
                                               </Group>
                                               <Component id="modificarClienteComboBox" min="-2" pref="350" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="247" max="32767" attributes="0"/>
+                                          <EmptySpace pref="266" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
@@ -616,7 +616,7 @@
                                               <Component id="cliente_correoLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="cliente_correoTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="311" max="32767" attributes="0"/>
+                                          <EmptySpace pref="313" max="32767" attributes="0"/>
                                           <Component id="crearTiendaButton2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -688,7 +688,7 @@
                                           <Component id="tienda_idLabel3" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarClienteComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="294" max="32767" attributes="0"/>
+                                          <EmptySpace pref="313" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -700,7 +700,7 @@
                                               <Component id="tienda_idLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="eliminarClienteComboBox" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="385" max="32767" attributes="0"/>
+                                          <EmptySpace pref="387" max="32767" attributes="0"/>
                                           <Component id="eliminarClienteButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -730,6 +730,564 @@
                                   </Events>
                                 </Component>
                               </SubComponents>
+                            </Container>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="productoTab">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                          <JTabbedPaneConstraints tabName="Producto">
+                            <Property name="tabTitle" type="java.lang.String" value="Producto"/>
+                          </JTabbedPaneConstraints>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="productoTabbedPane" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="productoTabbedPane" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JTabbedPane" name="productoTabbedPane">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
+                            <Property name="tabPlacement" type="int" value="2"/>
+                          </Properties>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+                          <SubComponents>
+                            <Container class="javax.swing.JPanel" name="productoCrearTab">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                                  <JTabbedPaneConstraints tabName="Crear">
+                                    <Property name="tabTitle" type="java.lang.String" value="Crear"/>
+                                  </JTabbedPaneConstraints>
+                                </Constraint>
+                              </Constraints>
+
+                              <Layout>
+                                <DimensionLayout dim="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="crearProductoButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="producto_codigoUPCLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_tamanoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_embalajeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_marcaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="producto_marcaTextField" max="32767" attributes="0"/>
+                                                      <Component id="producto_nombreTextField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="producto_tamanoLabelTextField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="producto_embalajeTextField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="producto_codigoUPCTextField" alignment="0" pref="150" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="452" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                                <DimensionLayout dim="1">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_codigoUPCTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_codigoUPCLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_nombreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_tamanoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_tamanoLabelTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_embalajeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_embalajeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_marcaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_marcaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="239" max="32767" attributes="0"/>
+                                          <Component id="crearProductoButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                              </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="producto_codigoUPCLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="C&#xf3;digo UPC:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_codigoUPCTextField">
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="producto_codigoUPCTextFieldActionPerformed"/>
+                                  </Events>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_nombreLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_nombreTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_tamanoLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Tama&#xf1;o:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_tamanoLabelTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_embalajeLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="M&#xe9;todo de Embalaje"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_embalajeTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_marcaLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Marca:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_marcaTextField">
+                                </Component>
+                                <Component class="javax.swing.JButton" name="crearProductoButton">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Crear Producto"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearProductoButtonActionPerformed"/>
+                                  </Events>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                            <Container class="javax.swing.JPanel" name="productoModificarTab">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                                  <JTabbedPaneConstraints tabName="Modificar">
+                                    <Property name="tabTitle" type="java.lang.String" value="Modificar"/>
+                                  </JTabbedPaneConstraints>
+                                </Constraint>
+                              </Constraints>
+
+                              <Layout>
+                                <DimensionLayout dim="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="modificarProductoButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="producto_codigoUPCLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_nombreLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_tamanoLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_embalajeLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="producto_marcaLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="producto_marcaTextField1" alignment="0" pref="150" max="32767" attributes="0"/>
+                                                          <Component id="producto_nombreTextField1" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="producto_tamanoLabelTextField1" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="producto_embalajeTextField1" alignment="0" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="modificarProductosComboBox" min="-2" pref="350" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="252" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                                <DimensionLayout dim="1">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_codigoUPCLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="modificarProductosComboBox" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_nombreLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_nombreTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_tamanoLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_tamanoLabelTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_embalajeLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_embalajeTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_marcaLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="producto_marcaTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="233" max="32767" attributes="0"/>
+                                          <Component id="modificarProductoButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                              </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="producto_codigoUPCLabel1">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="C&#xf3;digo UPC:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_nombreLabel1">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_nombreTextField1">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_tamanoLabel1">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Tama&#xf1;o:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_tamanoLabelTextField1">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_embalajeLabel1">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="M&#xe9;todo de Embalaje"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_embalajeTextField1">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="producto_marcaLabel1">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Marca:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_marcaTextField1">
+                                </Component>
+                                <Component class="javax.swing.JButton" name="modificarProductoButton">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Modificar Producto"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modificarProductoButtonActionPerformed"/>
+                                  </Events>
+                                </Component>
+                                <Component class="javax.swing.JComboBox" name="modificarProductosComboBox">
+                                  <Events>
+                                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="modificarProductosComboBoxItemStateChanged"/>
+                                  </Events>
+                                  <AuxValues>
+                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                  </AuxValues>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                            <Container class="javax.swing.JPanel" name="productoEliminarTab">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                                  <JTabbedPaneConstraints tabName="Eliminar">
+                                    <Property name="tabTitle" type="java.lang.String" value="Eliminar"/>
+                                  </JTabbedPaneConstraints>
+                                </Constraint>
+                              </Constraints>
+
+                              <Layout>
+                                <DimensionLayout dim="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="eliminarProductoButton1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Component id="tienda_idLabel4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                          <Component id="eliminarProductoComboBox" min="-2" pref="350" max="-2" attributes="0"/>
+                                          <EmptySpace pref="313" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                                <DimensionLayout dim="1">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="tienda_idLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="eliminarProductoComboBox" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="387" max="32767" attributes="0"/>
+                                          <Component id="eliminarProductoButton1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                              </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="tienda_idLabel4">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="ID:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JComboBox" name="eliminarProductoComboBox">
+                                  <Events>
+                                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="eliminarProductoComboBoxItemStateChanged"/>
+                                  </Events>
+                                  <AuxValues>
+                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                  </AuxValues>
+                                </Component>
+                                <Component class="javax.swing.JButton" name="eliminarProductoButton1">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Eliminar Producto"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarProductoButton1ActionPerformed"/>
+                                  </Events>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="vendedorTab">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                          <JTabbedPaneConstraints tabName="Vendedor">
+                            <Property name="tabTitle" type="java.lang.String" value="Vendedor"/>
+                          </JTabbedPaneConstraints>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="vendedorTabbedPane" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="vendedorTabbedPane" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JTabbedPane" name="vendedorTabbedPane">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
+                            <Property name="tabPlacement" type="int" value="2"/>
+                          </Properties>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+                          <SubComponents>
+                            <Container class="javax.swing.JPanel" name="vendedorCrearTab">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                                  <JTabbedPaneConstraints tabName="Crear">
+                                    <Property name="tabTitle" type="java.lang.String" value="Crear"/>
+                                  </JTabbedPaneConstraints>
+                                </Constraint>
+                              </Constraints>
+
+                              <Layout>
+                                <DimensionLayout dim="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="crearVendedorButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="vendedor_idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="vendedor_nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="vendedor_idTextField" pref="150" max="32767" attributes="0"/>
+                                              <Component id="vendedor_nombreTextField" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="521" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                                <DimensionLayout dim="1">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="vendedor_idTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="vendedor_idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="vendedor_nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="vendedor_nombreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="359" max="32767" attributes="0"/>
+                                          <Component id="crearVendedorButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                </DimensionLayout>
+                              </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="vendedor_idLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="ID:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="vendedor_idTextField">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="vendedor_nombreLabel">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="vendedor_nombreTextField">
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vendedor_nombreTextFieldActionPerformed"/>
+                                  </Events>
+                                </Component>
+                                <Component class="javax.swing.JButton" name="crearVendedorButton">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Crear Vendedor"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearVendedorButtonActionPerformed"/>
+                                  </Events>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                            <Container class="javax.swing.JPanel" name="vendedorModificarTab">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                                  <JTabbedPaneConstraints tabName="Modificar">
+                                    <Property name="tabTitle" type="java.lang.String" value="Modificar"/>
+                                  </JTabbedPaneConstraints>
+                                </Constraint>
+                              </Constraints>
+
+                              <Layout>
+                                <DimensionLayout dim="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                </DimensionLayout>
+                                <DimensionLayout dim="1">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                </DimensionLayout>
+                              </Layout>
+                            </Container>
+                            <Container class="javax.swing.JPanel" name="vendedorEliminarTab">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                                  <JTabbedPaneConstraints tabName="Eliminar">
+                                    <Property name="tabTitle" type="java.lang.String" value="Eliminar"/>
+                                  </JTabbedPaneConstraints>
+                                </Constraint>
+                              </Constraints>
+
+                              <Layout>
+                                <DimensionLayout dim="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                </DimensionLayout>
+                                <DimensionLayout dim="1">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                </DimensionLayout>
+                              </Layout>
                             </Container>
                           </SubComponents>
                         </Container>
@@ -795,7 +1353,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace pref="626" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="645" max="32767" attributes="0"/>
                                                   <Component id="crearFacturaButton" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
@@ -868,7 +1426,7 @@
                                               <Component id="facturatienda_idTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="facturatienda_idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="157" max="32767" attributes="0"/>
+                                          <EmptySpace pref="159" max="32767" attributes="0"/>
                                           <Component id="crearFacturaButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -993,412 +1551,6 @@
                         </Container>
                       </SubComponents>
                     </Container>
-                    <Container class="javax.swing.JPanel" name="productoTab">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                        </Property>
-                      </Properties>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                          <JTabbedPaneConstraints tabName="Producto">
-                            <Property name="tabTitle" type="java.lang.String" value="Producto"/>
-                          </JTabbedPaneConstraints>
-                        </Constraint>
-                      </Constraints>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="productoTabbedPane" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="productoTabbedPane" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                      <SubComponents>
-                        <Container class="javax.swing.JTabbedPane" name="productoTabbedPane">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                            <Property name="tabPlacement" type="int" value="2"/>
-                          </Properties>
-
-                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
-                          <SubComponents>
-                            <Container class="javax.swing.JPanel" name="productoCrearTab">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                                  <JTabbedPaneConstraints tabName="Crear">
-                                    <Property name="tabTitle" type="java.lang.String" value="Crear"/>
-                                  </JTabbedPaneConstraints>
-                                </Constraint>
-                              </Constraints>
-
-                              <Layout>
-                                <DimensionLayout dim="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="crearProductoButton" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="producto_codigoUPCLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="producto_nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="producto_tamanoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="producto_embalajeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="producto_marcaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="producto_marcaTextField" max="32767" attributes="0"/>
-                                                      <Component id="producto_nombreTextField" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="producto_tamanoLabelTextField" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="producto_embalajeTextField" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="producto_codigoUPCTextField" alignment="0" pref="150" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="0" pref="433" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                </DimensionLayout>
-                                <DimensionLayout dim="1">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="producto_codigoUPCTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="producto_codigoUPCLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="producto_nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="producto_nombreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="producto_tamanoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="producto_tamanoLabelTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="producto_embalajeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="producto_embalajeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="producto_marcaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="producto_marcaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace pref="237" max="32767" attributes="0"/>
-                                          <Component id="crearProductoButton" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                </DimensionLayout>
-                              </Layout>
-                              <SubComponents>
-                                <Component class="javax.swing.JLabel" name="producto_codigoUPCLabel">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="C&#xf3;digo UPC:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="producto_codigoUPCTextField">
-                                  <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="producto_codigoUPCTextFieldActionPerformed"/>
-                                  </Events>
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="producto_nombreLabel">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="producto_nombreTextField">
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="producto_tamanoLabel">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Tama&#xf1;o:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="producto_tamanoLabelTextField">
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="producto_embalajeLabel">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="M&#xe9;todo de Embalaje"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="producto_embalajeTextField">
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="producto_marcaLabel">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Marca:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="producto_marcaTextField">
-                                </Component>
-                                <Component class="javax.swing.JButton" name="crearProductoButton">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Crear Producto"/>
-                                  </Properties>
-                                  <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearProductoButtonActionPerformed"/>
-                                  </Events>
-                                </Component>
-                              </SubComponents>
-                            </Container>
-                            <Container class="javax.swing.JPanel" name="productoModificarTab">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                                  <JTabbedPaneConstraints tabName="Modificar">
-                                    <Property name="tabTitle" type="java.lang.String" value="Modificar"/>
-                                  </JTabbedPaneConstraints>
-                                </Constraint>
-                              </Constraints>
-
-                              <Layout>
-                                <DimensionLayout dim="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                                <DimensionLayout dim="1">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                              </Layout>
-                            </Container>
-                            <Container class="javax.swing.JPanel" name="productoEliminarTab">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                                  <JTabbedPaneConstraints tabName="Eliminar">
-                                    <Property name="tabTitle" type="java.lang.String" value="Eliminar"/>
-                                  </JTabbedPaneConstraints>
-                                </Constraint>
-                              </Constraints>
-
-                              <Layout>
-                                <DimensionLayout dim="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                                <DimensionLayout dim="1">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                              </Layout>
-                            </Container>
-                          </SubComponents>
-                        </Container>
-                      </SubComponents>
-                    </Container>
-                    <Container class="javax.swing.JPanel" name="vendedorTab">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                        </Property>
-                      </Properties>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                          <JTabbedPaneConstraints tabName="Vendedor">
-                            <Property name="tabTitle" type="java.lang.String" value="Vendedor"/>
-                          </JTabbedPaneConstraints>
-                        </Constraint>
-                      </Constraints>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="vendedorTabbedPane" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="vendedorTabbedPane" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                      <SubComponents>
-                        <Container class="javax.swing.JTabbedPane" name="vendedorTabbedPane">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                            <Property name="tabPlacement" type="int" value="2"/>
-                          </Properties>
-
-                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
-                          <SubComponents>
-                            <Container class="javax.swing.JPanel" name="vendedorCrearTab">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                                  <JTabbedPaneConstraints tabName="Crear">
-                                    <Property name="tabTitle" type="java.lang.String" value="Crear"/>
-                                  </JTabbedPaneConstraints>
-                                </Constraint>
-                              </Constraints>
-
-                              <Layout>
-                                <DimensionLayout dim="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="crearVendedorButton" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="vendedor_idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="vendedor_nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="vendedor_idTextField" pref="150" max="32767" attributes="0"/>
-                                              <Component id="vendedor_nombreTextField" max="32767" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace pref="502" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                </DimensionLayout>
-                                <DimensionLayout dim="1">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="vendedor_idTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="vendedor_idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="vendedor_nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="vendedor_nombreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace pref="357" max="32767" attributes="0"/>
-                                          <Component id="crearVendedorButton" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                </DimensionLayout>
-                              </Layout>
-                              <SubComponents>
-                                <Component class="javax.swing.JLabel" name="vendedor_idLabel">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="ID:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="vendedor_idTextField">
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="vendedor_nombreLabel">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="vendedor_nombreTextField">
-                                  <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vendedor_nombreTextFieldActionPerformed"/>
-                                  </Events>
-                                </Component>
-                                <Component class="javax.swing.JButton" name="crearVendedorButton">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Crear Vendedor"/>
-                                  </Properties>
-                                  <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearVendedorButtonActionPerformed"/>
-                                  </Events>
-                                </Component>
-                              </SubComponents>
-                            </Container>
-                            <Container class="javax.swing.JPanel" name="vendedorModificarTab">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                                  <JTabbedPaneConstraints tabName="Modificar">
-                                    <Property name="tabTitle" type="java.lang.String" value="Modificar"/>
-                                  </JTabbedPaneConstraints>
-                                </Constraint>
-                              </Constraints>
-
-                              <Layout>
-                                <DimensionLayout dim="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                                <DimensionLayout dim="1">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                              </Layout>
-                            </Container>
-                            <Container class="javax.swing.JPanel" name="vendedorEliminarTab">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                                  <JTabbedPaneConstraints tabName="Eliminar">
-                                    <Property name="tabTitle" type="java.lang.String" value="Eliminar"/>
-                                  </JTabbedPaneConstraints>
-                                </Constraint>
-                              </Constraints>
-
-                              <Layout>
-                                <DimensionLayout dim="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                                <DimensionLayout dim="1">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                              </Layout>
-                            </Container>
-                          </SubComponents>
-                        </Container>
-                      </SubComponents>
-                    </Container>
                   </SubComponents>
                 </Container>
               </SubComponents>
@@ -1466,7 +1618,7 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="inventarioProductosScrollPane" pref="648" max="32767" attributes="0"/>
+                                      <Component id="inventarioProductosScrollPane" pref="667" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="refreshInventarioProductosButton" min="-2" pref="100" max="-2" attributes="0"/>
@@ -1482,7 +1634,7 @@
                                   <Component id="inventarioProductosScrollPane" min="-2" pref="418" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="refreshInventarioProductosButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="9" max="32767" attributes="0"/>
+                                  <EmptySpace pref="11" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1540,7 +1692,7 @@
                                       <Component id="comprasClienteScrollPane" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <Component id="comprasClienteComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="194" max="32767" attributes="0"/>
+                                          <EmptySpace pref="213" max="32767" attributes="0"/>
                                           <Component id="comprasClienteButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -1557,7 +1709,7 @@
                                       <Component id="comprasClienteButton" min="-2" pref="34" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="comprasClienteScrollPane" pref="401" max="32767" attributes="0"/>
+                                  <Component id="comprasClienteScrollPane" pref="403" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1626,7 +1778,7 @@
                                       <Component id="ventasTiendaScrollPane" alignment="0" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="ventasTiendaComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="207" max="32767" attributes="0"/>
+                                          <EmptySpace pref="226" max="32767" attributes="0"/>
                                           <Component id="ventasTiendaButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -1643,7 +1795,7 @@
                                       <Component id="ventasTiendaButton" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="ventasTiendaScrollPane" pref="401" max="32767" attributes="0"/>
+                                  <Component id="ventasTiendaScrollPane" pref="403" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1689,7 +1841,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Container class="javax.swing.JPanel" name="jPanel4">
+                    <Container class="javax.swing.JPanel" name="productosTiendaTab">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1706,15 +1858,74 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="654" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="productosTiendaScrollPane" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="productosTiendaComboBox" min="-2" pref="350" max="-2" attributes="0"/>
+                                          <EmptySpace pref="207" max="32767" attributes="0"/>
+                                          <Component id="productosTiendaButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="461" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="productosTiendaComboBox" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
+                                      <Component id="productosTiendaButton" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="productosTiendaScrollPane" pref="403" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JComboBox" name="productosTiendaComboBox">
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="productosTiendaComboBoxItemStateChanged"/>
+                          </Events>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="productosTiendaScrollPane">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="ventasTiendaTable1">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="4" rowCount="4">
+                                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JButton" name="productosTiendaButton">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Ver Productos"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productosTiendaButtonActionPerformed"/>
+                          </Events>
+                        </Component>
+                      </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel5">
                       <Properties>
@@ -1733,12 +1944,12 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="654" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="673" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="461" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="463" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -1760,12 +1971,12 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="654" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="673" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="461" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="463" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -1787,12 +1998,12 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="654" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="673" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="461" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="463" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -1814,12 +2025,12 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="654" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="673" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="461" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="463" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
