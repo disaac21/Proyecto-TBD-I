@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.UIManager;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import newproject.Insertar;
 import newproject.Reportes;
@@ -2249,7 +2250,27 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }//GEN-LAST:event_USERproductosTiendaButtonActionPerformed
 
     private void USERrealizarCompraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USERrealizarCompraButtonActionPerformed
-        // TODO add your handling code here:
+        
+        int[] selectedRows = USERproductosTiendaTable.getSelectedRows();
+        
+        DefaultTableModel model = (DefaultTableModel) USERproductosTiendaTable.getModel();
+
+         Object[] rowData = new Object[0];
+                 
+        for (int selectedRow : selectedRows) {
+            // Get the data from each selected row
+             rowData = new Object[model.getColumnCount()];
+
+            for (int columnIndex = 0; columnIndex < model.getColumnCount(); columnIndex++) {
+                rowData[columnIndex] = model.getValueAt(selectedRow, columnIndex);
+            }
+            for (int i = 0; i < rowData.length; i++) {
+                System.out.println(rowData[i]);
+            }
+        }
+        
+        
+
     }//GEN-LAST:event_USERrealizarCompraButtonActionPerformed
 
     
