@@ -193,10 +193,10 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         productosTiendaTable = new javax.swing.JTable();
         productosTiendaButton = new javax.swing.JButton();
         Top20ProductosPais = new javax.swing.JPanel();
-        productosPaisComboBox = new javax.swing.JComboBox<>();
         productosPaisButton = new javax.swing.JButton();
         productosPaisScrollPane = new javax.swing.JScrollPane();
         productosPaisTable = new javax.swing.JTable();
+        productosPaisComboBox = new javax.swing.JComboBox<>();
         Top5VentasAnuales = new javax.swing.JPanel();
         ventasAnualesTiendaButton = new javax.swing.JButton();
         ventasAnualesTiendaScrollPane = new javax.swing.JScrollPane();
@@ -1470,12 +1470,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         Top20ProductosPais.setBackground(new java.awt.Color(255, 255, 255));
 
-        productosPaisComboBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                productosPaisComboBoxItemStateChanged(evt);
-            }
-        });
-
         productosPaisButton.setText("Ver Productos");
         productosPaisButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1496,6 +1490,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         ));
         productosPaisScrollPane.setViewportView(productosPaisTable);
 
+        productosPaisComboBox.setToolTipText("");
+
         javax.swing.GroupLayout Top20ProductosPaisLayout = new javax.swing.GroupLayout(Top20ProductosPais);
         Top20ProductosPais.setLayout(Top20ProductosPaisLayout);
         Top20ProductosPaisLayout.setHorizontalGroup(
@@ -1503,10 +1499,10 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             .addGroup(Top20ProductosPaisLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Top20ProductosPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(productosPaisScrollPane)
+                    .addComponent(productosPaisScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
                     .addGroup(Top20ProductosPaisLayout.createSequentialGroup()
-                        .addComponent(productosPaisComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
+                        .addComponent(productosPaisComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(productosPaisButton)))
                 .addContainerGap())
         );
@@ -1515,8 +1511,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             .addGroup(Top20ProductosPaisLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Top20ProductosPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(productosPaisComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productosPaisButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(productosPaisButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(productosPaisComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(productosPaisScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                 .addGap(14, 14, 14))
@@ -2189,7 +2185,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }//GEN-LAST:event_productosTiendaComboBoxItemStateChanged
 
     private void productosTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosTiendaButtonActionPerformed
-        // TODO add your handling code here:
+        Reportes.Top20productosTienda(productosTiendaTable, productosTiendaComboBox);
     }//GEN-LAST:event_productosTiendaButtonActionPerformed
 
     private void producto_tiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_producto_tiendaComboBoxItemStateChanged
@@ -2200,16 +2196,12 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         // TODO add your handling code here:
     }//GEN-LAST:event_producto_reordenTextFieldActionPerformed
 
-    private void productosPaisComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_productosPaisComboBoxItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productosPaisComboBoxItemStateChanged
-
     private void productosPaisButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosPaisButtonActionPerformed
-        // TODO add your handling code here:
+        Reportes.Top20productosPais(productosPaisTable, productosPaisComboBox);
     }//GEN-LAST:event_productosPaisButtonActionPerformed
 
     private void ventasAnualesTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasAnualesTiendaButtonActionPerformed
-        // TODO add your handling code here:
+        Reportes.Top5Tiendas(ventasAnualesTiendaTable);
     }//GEN-LAST:event_ventasAnualesTiendaButtonActionPerformed
 
     private void ventasCocaPepsiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasCocaPepsiButtonActionPerformed

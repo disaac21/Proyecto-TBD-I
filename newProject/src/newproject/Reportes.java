@@ -374,4 +374,147 @@ public class Reportes {
         }
         
     }
+    
+    public static void Top20productosTienda(JTable ventasTiendaTable, JComboBox ComboBoxTiendas) {
+        //numero fecha isv subtotal total cliente_id tienda_id
+        
+        //Captura Modelo
+        DefaultTableModel model = new DefaultTableModel();
+        TableRowSorter<TableModel> ordenar = new TableRowSorter<TableModel>(model);
+        ventasTiendaTable.setRowSorter(ordenar);
+        
+        //Agrega Columnas
+        model.addColumn("Tienda ID"); model.addColumn("Codigo UPC"); model.addColumn("Nombre");
+        model.addColumn("No. Ventas");
+        
+
+        //Regresa Modelo
+        ventasTiendaTable.setModel(model);
+
+        //Llena Datos
+        String[] datos = new String[4];
+        String nombreVista = "proyecto.vista4";
+        String sql = "SELECT * FROM " + nombreVista + ";";
+        String idFiltrar = ComboBoxTiendas.getSelectedItem().toString().substring(0, ComboBoxTiendas.getSelectedItem().toString().indexOf('-')-1);
+        
+        int cont = 0;
+        
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                
+                if (datos[0].equals(idFiltrar) && cont < 20) {
+                    model.addRow(datos);
+                    cont++;
+                }
+            }
+           
+            ventasTiendaTable.setModel(model);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
+        }
+        
+    }
+    
+    public static void Top20productosPais(JTable ventasTiendaTable, JComboBox ComboBoxTiendas) {
+        //numero fecha isv subtotal total cliente_id tienda_id
+        
+        //Captura Modelo
+        DefaultTableModel model = new DefaultTableModel();
+        TableRowSorter<TableModel> ordenar = new TableRowSorter<TableModel>(model);
+        ventasTiendaTable.setRowSorter(ordenar);
+        
+        //Agrega Columnas
+        model.addColumn("Ubicación"); model.addColumn("Tienda ID"); model.addColumn("Codigo UPC");
+        model.addColumn("Nombre"); model.addColumn("No. Ventas");
+        
+
+        //Regresa Modelo
+        ventasTiendaTable.setModel(model);
+
+        //Llena Datos
+        String[] datos = new String[5];
+        String nombreVista = "proyecto.vista5";
+        String sql = "SELECT * FROM " + nombreVista + ";";
+        String idFiltrar = ComboBoxTiendas.getSelectedItem().toString();
+        
+        int cont = 0;
+        
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                
+                if (datos[0].equals(idFiltrar) && cont < 20) {
+                    model.addRow(datos);
+                    cont++;
+                }
+            }
+           
+            ventasTiendaTable.setModel(model);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
+        }
+        
+    }
+    
+    public static void Top5Tiendas(JTable ventasTiendaTable) {
+        //numero fecha isv subtotal total cliente_id tienda_id
+        
+        //Captura Modelo
+        DefaultTableModel model = new DefaultTableModel();
+        TableRowSorter<TableModel> ordenar = new TableRowSorter<TableModel>(model);
+        ventasTiendaTable.setRowSorter(ordenar);
+        
+        //Agrega Columnas
+        model.addColumn("Tienda ID"); model.addColumn("Nombre"); model.addColumn("Total Ventas");
+        
+
+        //Regresa Modelo
+        ventasTiendaTable.setModel(model);
+
+        //Llena Datos
+        String[] datos = new String[7];
+        String nombreVista = "proyecto.Top5TiendasVendidas";
+        String sql = "SELECT * FROM " + nombreVista + ";" ;
+        
+        
+
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                
+                model.addRow(datos);
+            }
+           
+            ventasTiendaTable.setModel(model);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
+        }
+        
+    }
+    
 }
