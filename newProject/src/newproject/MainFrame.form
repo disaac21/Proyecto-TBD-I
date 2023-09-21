@@ -18,7 +18,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="adminTabbedPane" pref="905" max="32767" attributes="0"/>
+                  <Component id="adminTabbedPane" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -62,7 +62,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="mantenimientoTabbedPane" alignment="1" pref="905" max="32767" attributes="0"/>
+                      <Component id="mantenimientoTabbedPane" alignment="1" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -99,7 +99,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="tiendaTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
+                              <Component id="tiendaTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -427,7 +427,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="clienteTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
+                              <Component id="clienteTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -738,7 +738,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="productoTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
+                              <Component id="productoTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -1482,7 +1482,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="facturaTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
+                              <Component id="facturaTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -2443,6 +2443,13 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="371" max="-2" attributes="0"/>
+                      <Component id="USERClienteComboBox" min="-2" pref="302" max="-2" attributes="0"/>
+                      <EmptySpace pref="256" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -2457,6 +2464,13 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="USERproductosTiendaScrollPane" pref="444" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="USERClienteComboBox" min="-2" pref="35" max="-2" attributes="0"/>
+                      <EmptySpace pref="461" max="32767" attributes="0"/>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2511,6 +2525,14 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="USERrealizarCompraButtonActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JComboBox" name="USERClienteComboBox">
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="USERClienteComboBoxItemStateChanged"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
   </NonVisualComponents>
@@ -2544,11 +2566,6 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jPanel9" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="previewAdminButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="previewUserButton" min="-2" pref="155" max="-2" attributes="0"/>
-                  </Group>
                   <Component id="loginPanel" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -2560,13 +2577,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="loginPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="previewAdminButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="previewUserButton" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -2588,42 +2600,48 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="previewUserButton" min="-2" pref="155" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="loginLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="usernameLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="usernameTextField" min="-2" pref="180" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="passwordTextField" min="-2" pref="180" max="-2" attributes="0"/>
-                          <EmptySpace pref="22" max="32767" attributes="0"/>
-                          <Component id="loginButton" min="-2" pref="63" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="loginLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="passwordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="usernameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="passwordTextField" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="usernameTextField" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Component id="loginLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="usernameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="usernameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="passwordTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="loginButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <Component id="previewUserButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -2632,12 +2650,15 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="loginLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Log In"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Usuario Log In"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="usernameLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Username:"/>
+            <Property name="text" type="java.lang.String" value="User ID:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="usernameTextField">
@@ -2647,38 +2668,21 @@
         </Component>
         <Component class="javax.swing.JLabel" name="passwordLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Password:"/>
+            <Property name="text" type="java.lang.String" value="Correo Electr&#xf3;nico:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="passwordTextField">
         </Component>
-        <Component class="javax.swing.JButton" name="loginButton">
+        <Component class="javax.swing.JButton" name="previewUserButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Log In"/>
+            <Property name="text" type="java.lang.String" value="Log In Usuario"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="previewUserButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="previewAdminButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Preview Pantalla Admin"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="previewAdminButtonMouseClicked"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="previewAdminButtonActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="previewUserButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Preview Pantalla User"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="previewUserButtonActionPerformed"/>
-      </Events>
-    </Component>
     <Container class="javax.swing.JPanel" name="jPanel9">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2694,15 +2698,89 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="previewAdminButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="loginLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="passwordLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="usernameLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="usernameTextField1" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="passwordTextField1" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="262" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="263" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="loginLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="usernameLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="usernameTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="passwordTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="passwordLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="27" max="32767" attributes="0"/>
+                  <Component id="previewAdminButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="previewAdminButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Log In Administrador"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="previewAdminButtonMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="previewAdminButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="loginLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Administrador Log In"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="usernameLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="User Adminsitrador:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="usernameTextField1">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameTextField1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="passwordLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Password:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="passwordTextField1">
+        </Component>
+      </SubComponents>
     </Container>
   </SubComponents>
 </Form>

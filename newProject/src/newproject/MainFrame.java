@@ -17,6 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -215,16 +216,21 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         USERproductosTiendaScrollPane = new javax.swing.JScrollPane();
         USERproductosTiendaTable = new javax.swing.JTable();
         USERrealizarCompraButton = new javax.swing.JButton();
+        USERClienteComboBox = new javax.swing.JComboBox<>();
         loginPanel = new javax.swing.JPanel();
         loginLabel = new javax.swing.JLabel();
         usernameLabel = new javax.swing.JLabel();
         usernameTextField = new javax.swing.JTextField();
         passwordLabel = new javax.swing.JLabel();
         passwordTextField = new javax.swing.JTextField();
-        loginButton = new javax.swing.JButton();
-        previewAdminButton = new javax.swing.JButton();
         previewUserButton = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
+        previewAdminButton = new javax.swing.JButton();
+        loginLabel1 = new javax.swing.JLabel();
+        usernameLabel1 = new javax.swing.JLabel();
+        usernameTextField1 = new javax.swing.JTextField();
+        passwordLabel1 = new javax.swing.JLabel();
+        passwordTextField1 = new javax.swing.JTextField();
 
         adminScreen.setTitle("Admin Screen");
         adminScreen.setBackground(new java.awt.Color(255, 255, 255));
@@ -433,7 +439,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         tiendaTab.setLayout(tiendaTabLayout);
         tiendaTabLayout.setHorizontalGroup(
             tiendaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tiendaTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
+            .addComponent(tiendaTabbedPane)
         );
         tiendaTabLayout.setVerticalGroup(
             tiendaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -620,7 +626,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         clienteTab.setLayout(clienteTabLayout);
         clienteTabLayout.setHorizontalGroup(
             clienteTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(clienteTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
+            .addComponent(clienteTabbedPane)
         );
         clienteTabLayout.setVerticalGroup(
             clienteTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -894,7 +900,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         productoTab.setLayout(productoTabLayout);
         productoTabLayout.setHorizontalGroup(
             productoTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(productoTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
+            .addComponent(productoTabbedPane)
         );
         productoTabLayout.setVerticalGroup(
             productoTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1222,7 +1228,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         facturaTab.setLayout(facturaTabLayout);
         facturaTabLayout.setHorizontalGroup(
             facturaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(facturaTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
+            .addComponent(facturaTabbedPane)
         );
         facturaTabLayout.setVerticalGroup(
             facturaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1235,7 +1241,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         mantenimientoTab.setLayout(mantenimientoTabLayout);
         mantenimientoTabLayout.setHorizontalGroup(
             mantenimientoTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mantenimientoTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
+            .addComponent(mantenimientoTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         mantenimientoTabLayout.setVerticalGroup(
             mantenimientoTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1682,7 +1688,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             adminScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminScreenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(adminTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
+                .addComponent(adminTabbedPane)
                 .addContainerGap())
         );
         adminScreenLayout.setVerticalGroup(
@@ -1746,6 +1752,12 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             }
         });
 
+        USERClienteComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                USERClienteComboBoxItemStateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout userScreenLayout = new javax.swing.GroupLayout(userScreen.getContentPane());
         userScreen.getContentPane().setLayout(userScreenLayout);
         userScreenLayout.setHorizontalGroup(
@@ -1761,6 +1773,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                         .addComponent(USERrealizarCompraButton))
                     .addComponent(USERproductosTiendaScrollPane))
                 .addContainerGap())
+            .addGroup(userScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(userScreenLayout.createSequentialGroup()
+                    .addGap(371, 371, 371)
+                    .addComponent(USERClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(256, Short.MAX_VALUE)))
         );
         userScreenLayout.setVerticalGroup(
             userScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1773,6 +1790,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(USERproductosTiendaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(userScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(userScreenLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(USERClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(461, Short.MAX_VALUE)))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1782,9 +1804,10 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         loginPanel.setBackground(new java.awt.Color(255, 255, 255));
         loginPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        loginLabel.setText("Log In");
+        loginLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        loginLabel.setText("Usuario Log In");
 
-        usernameLabel.setText("Username:");
+        usernameLabel.setText("User ID:");
 
         usernameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1792,12 +1815,12 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             }
         });
 
-        passwordLabel.setText("Password:");
+        passwordLabel.setText("Correo Electrónico:");
 
-        loginButton.setText("Log In");
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
+        previewUserButton.setText("Log In Usuario");
+        previewUserButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
+                previewUserButtonActionPerformed(evt);
             }
         });
 
@@ -1805,40 +1828,46 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         loginPanel.setLayout(loginPanelLayout);
         loginPanelLayout.setHorizontalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(loginPanelLayout.createSequentialGroup()
-                        .addComponent(usernameLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(passwordLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(loginPanelLayout.createSequentialGroup()
-                        .addComponent(loginLabel)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(previewUserButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(loginPanelLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(loginLabel)
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(passwordLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(usernameLabel, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         loginPanelLayout.setVerticalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(loginPanelLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
                 .addComponent(loginLabel)
                 .addGap(18, 18, 18)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameLabel)
-                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(passwordLabel)
-                    .addComponent(loginButton))
+                    .addComponent(passwordLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(previewUserButton)
                 .addContainerGap())
         );
 
-        previewAdminButton.setText("Preview Pantalla Admin");
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        previewAdminButton.setText("Log In Administrador");
         previewAdminButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 previewAdminButtonMouseClicked(evt);
@@ -1850,25 +1879,57 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             }
         });
 
-        previewUserButton.setText("Preview Pantalla User");
-        previewUserButton.addActionListener(new java.awt.event.ActionListener() {
+        loginLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        loginLabel1.setText("Administrador Log In");
+
+        usernameLabel1.setText("User Adminsitrador:");
+
+        usernameTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                previewUserButtonActionPerformed(evt);
+                usernameTextField1ActionPerformed(evt);
             }
         });
 
-        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        passwordLabel1.setText("Password:");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(previewAdminButton)
+                .addContainerGap())
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(loginLabel1)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(passwordLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(usernameLabel1, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(usernameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(passwordTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 263, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(loginLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(usernameLabel1)
+                    .addComponent(usernameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(passwordTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(previewAdminButton)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1879,10 +1940,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(previewAdminButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(previewUserButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(loginPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -1891,32 +1948,30 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(previewAdminButton)
-                    .addComponent(previewUserButton))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginButtonActionPerformed
-
     private void previewAdminButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_previewAdminButtonMouseClicked
         
     }//GEN-LAST:event_previewAdminButtonMouseClicked
 
     private void previewAdminButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previewAdminButtonActionPerformed
-        adminScreen.setModal(true); //bloquear window
-        adminScreen.pack();//tamaño más grande
-        adminScreen.setAlwaysOnTop(true);
-        adminScreen.setLocationRelativeTo(this); //posición
-        adminScreen.setVisible(true); //vista
+        
+        if (usernameTextField1.getText().equals(user) && passwordTextField1.getText().equals(password)) {
+            Reportes.comprasClienteComboBox(USERClienteComboBox);
+            adminScreen.setModal(true); //bloquear window
+            adminScreen.pack();//tamaño más grande
+            adminScreen.setAlwaysOnTop(true);
+            adminScreen.setLocationRelativeTo(this); //posición
+            adminScreen.setVisible(true); //vista
+        } else {
+            JOptionPane.showMessageDialog(this, "Credenciales Equivocadas.");
+        }
     }//GEN-LAST:event_previewAdminButtonActionPerformed
 
     private void usernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldActionPerformed
@@ -1924,11 +1979,24 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }//GEN-LAST:event_usernameTextFieldActionPerformed
 
     private void previewUserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previewUserButtonActionPerformed
-        userScreen.setModal(true); //bloquear window
-        userScreen.pack();//tamaño más grande
-        userScreen.setAlwaysOnTop(true);
-        userScreen.setLocationRelativeTo(this); //posición
-        userScreen.setVisible(true); //vista
+        Reportes.comprasClienteComboBox(USERClienteComboBox);
+        
+        boolean Entrar = false;
+        
+        Entrar = Reportes.CredencialesCliente(usernameTextField.getText(), passwordTextField.getText());
+        
+        if (Entrar) {
+            userScreen.setModal(true); //bloquear window
+            userScreen.pack();//tamaño más grande
+            userScreen.setAlwaysOnTop(true);
+            userScreen.setLocationRelativeTo(this); //posición
+            userScreen.setVisible(true); //vista
+            
+        } else {
+            JOptionPane.showMessageDialog(this, "Cliente Inexistente.");
+        }
+        
+        
     }//GEN-LAST:event_previewUserButtonActionPerformed
 
     private void crearProductoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearProductoButtonActionPerformed
@@ -2265,6 +2333,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
     }//GEN-LAST:event_USERrealizarCompraButtonActionPerformed
 
+    private void usernameTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameTextField1ActionPerformed
+
+    private void USERClienteComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_USERClienteComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_USERClienteComboBoxItemStateChanged
+
     
     public static void main(String args[]) {
         
@@ -2313,6 +2389,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel TiendasCocaPepsi;
     private javax.swing.JPanel Top20ProductosPais;
     private javax.swing.JPanel Top5VentasAnuales;
+    private javax.swing.JComboBox<String> USERClienteComboBox;
     private javax.swing.JButton USERproductosTiendaButton;
     private javax.swing.JComboBox<String> USERproductosTiendaComboBox;
     private javax.swing.JScrollPane USERproductosTiendaScrollPane;
@@ -2384,8 +2461,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JButton loginButton;
     private javax.swing.JLabel loginLabel;
+    private javax.swing.JLabel loginLabel1;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JPanel mantenimientoTab;
     private javax.swing.JTabbedPane mantenimientoTabbedPane;
@@ -2398,7 +2475,9 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JButton modificarVendedorButton;
     private javax.swing.JComboBox<String> modificarVendedorComboBox;
     private javax.swing.JLabel passwordLabel;
+    private javax.swing.JLabel passwordLabel1;
     private javax.swing.JTextField passwordTextField;
+    private javax.swing.JTextField passwordTextField1;
     private javax.swing.JButton previewAdminButton;
     private javax.swing.JButton previewUserButton;
     private javax.swing.JPanel productType;
@@ -2469,7 +2548,9 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JTextField tienda_ubicacionTextField;
     private javax.swing.JDialog userScreen;
     private javax.swing.JLabel usernameLabel;
+    private javax.swing.JLabel usernameLabel1;
     private javax.swing.JTextField usernameTextField;
+    private javax.swing.JTextField usernameTextField1;
     private javax.swing.JPanel vendedorCrearTab;
     private javax.swing.JPanel vendedorEliminarTab;
     private javax.swing.JPanel vendedorModificarTab;

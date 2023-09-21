@@ -606,4 +606,38 @@ public class Reportes {
         
     }
     
+    public static boolean CredencialesCliente(String id, String correo) {
+        //Llena Datos
+        String[] datos = new String[2];
+        String nombreVista = "proyecto.ClientesIDCorreo";
+        String sql = "SELECT * FROM " + nombreVista + ";" ;
+        
+        
+
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);                
+                
+                System.out.println(datos[0]);
+                System.out.println(datos[1]);
+                
+                if (id.equals(datos[0]) && correo.equals(datos[1])) {
+                    System.out.println("true");
+                    return true;
+                }
+                
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
+        }
+        System.out.println("false");
+        return false;
+    }
+    
 }
