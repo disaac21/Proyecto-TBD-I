@@ -209,6 +209,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         productTypeScrollPane = new javax.swing.JScrollPane();
         productTypeTable = new javax.swing.JTable();
         userScreen = new javax.swing.JDialog();
+        USERproductosTiendaComboBox = new javax.swing.JComboBox<>();
+        USERproductosTiendaButton = new javax.swing.JButton();
+        USERproductosTiendaScrollPane = new javax.swing.JScrollPane();
+        USERproductosTiendaTable = new javax.swing.JTable();
+        USERrealizarCompraButton = new javax.swing.JButton();
         loginPanel = new javax.swing.JPanel();
         loginLabel = new javax.swing.JLabel();
         usernameLabel = new javax.swing.JLabel();
@@ -1693,15 +1698,84 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         userScreen.setTitle("User Screen");
         userScreen.setBackground(new java.awt.Color(255, 255, 255));
 
+        USERproductosTiendaComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                USERproductosTiendaComboBoxItemStateChanged(evt);
+            }
+        });
+
+        USERproductosTiendaButton.setText("Ver Productos");
+        USERproductosTiendaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                USERproductosTiendaButtonActionPerformed(evt);
+            }
+        });
+
+        USERproductosTiendaTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        USERproductosTiendaTable.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        USERproductosTiendaTable.setShowHorizontalLines(true);
+        USERproductosTiendaTable.setShowVerticalLines(true);
+        USERproductosTiendaScrollPane.setViewportView(USERproductosTiendaTable);
+
+        USERrealizarCompraButton.setText("Realizar Compra");
+        USERrealizarCompraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                USERrealizarCompraButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout userScreenLayout = new javax.swing.GroupLayout(userScreen.getContentPane());
         userScreen.getContentPane().setLayout(userScreenLayout);
         userScreenLayout.setHorizontalGroup(
             userScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(userScreenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(userScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(userScreenLayout.createSequentialGroup()
+                        .addComponent(USERproductosTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 329, Short.MAX_VALUE)
+                        .addComponent(USERproductosTiendaButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(USERrealizarCompraButton))
+                    .addComponent(USERproductosTiendaScrollPane))
+                .addContainerGap())
         );
         userScreenLayout.setVerticalGroup(
             userScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(userScreenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(userScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(USERproductosTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(USERproductosTiendaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(USERrealizarCompraButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(USERproductosTiendaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2011,6 +2085,10 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         productosPaisComboBox.removeAll();
         Reportes.PaisesComboBox(productosPaisComboBox);
         
+        //User
+        USERproductosTiendaComboBox.removeAllItems();
+        Reportes.ventasTiendaComboBox(USERproductosTiendaComboBox);
+        
     }//GEN-LAST:event_adminTabbedPaneStateChanged
 
     private void ventasTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ventasTiendaComboBoxItemStateChanged
@@ -2162,6 +2240,18 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         Eliminar.eliminarVENDEDOR(id);
     }//GEN-LAST:event_eliminarProductoButton2ActionPerformed
 
+    private void USERproductosTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_USERproductosTiendaComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_USERproductosTiendaComboBoxItemStateChanged
+
+    private void USERproductosTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USERproductosTiendaButtonActionPerformed
+        Reportes.productosPorTienda(USERproductosTiendaTable, USERproductosTiendaComboBox);
+    }//GEN-LAST:event_USERproductosTiendaButtonActionPerformed
+
+    private void USERrealizarCompraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USERrealizarCompraButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_USERrealizarCompraButtonActionPerformed
+
     
     public static void main(String args[]) {
         
@@ -2210,6 +2300,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel TiendasCocaPepsi;
     private javax.swing.JPanel Top20ProductosPais;
     private javax.swing.JPanel Top5VentasAnuales;
+    private javax.swing.JButton USERproductosTiendaButton;
+    private javax.swing.JComboBox<String> USERproductosTiendaComboBox;
+    private javax.swing.JScrollPane USERproductosTiendaScrollPane;
+    private javax.swing.JTable USERproductosTiendaTable;
+    private javax.swing.JButton USERrealizarCompraButton;
     private javax.swing.JDialog adminScreen;
     private javax.swing.JTabbedPane adminTabbedPane;
     private javax.swing.JPanel clienteCrearTab;
