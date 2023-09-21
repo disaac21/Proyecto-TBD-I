@@ -803,16 +803,26 @@
                                                       <Component id="producto_tamanoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       <Component id="producto_embalajeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       <Component id="producto_marcaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="producto_marcaTextField" max="32767" attributes="0"/>
-                                                      <Component id="producto_nombreTextField" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="producto_tamanoLabelTextField" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="producto_embalajeTextField" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="producto_codigoUPCTextField" alignment="0" pref="150" max="32767" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="producto_reordenTextField" max="32767" attributes="0"/>
+                                                          <Component id="producto_cantidadTextField" max="32767" attributes="0"/>
+                                                          <Component id="producto_precioTextField" max="32767" attributes="0"/>
+                                                          <Component id="producto_marcaTextField" max="32767" attributes="0"/>
+                                                          <Component id="producto_nombreTextField" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="producto_tamanoLabelTextField" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="producto_embalajeTextField" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="producto_codigoUPCTextField" alignment="0" pref="150" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="producto_tiendaComboBox" min="-2" pref="200" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="452" max="32767" attributes="0"/>
+                                                  <EmptySpace min="0" pref="402" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -847,7 +857,27 @@
                                               <Component id="producto_marcaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="producto_marcaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="239" max="32767" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_precioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_cantidadTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_reordenTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_tiendaComboBox" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="67" max="32767" attributes="0"/>
                                           <Component id="crearProductoButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -901,6 +931,43 @@
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearProductoButtonActionPerformed"/>
                                   </Events>
                                 </Component>
+                                <Component class="javax.swing.JTextField" name="producto_precioTextField">
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_cantidadTextField">
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_reordenTextField">
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="producto_reordenTextFieldActionPerformed"/>
+                                  </Events>
+                                </Component>
+                                <Component class="javax.swing.JComboBox" name="producto_tiendaComboBox">
+                                  <Events>
+                                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="producto_tiendaComboBoxItemStateChanged"/>
+                                  </Events>
+                                  <AuxValues>
+                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                  </AuxValues>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel1">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Precio:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel2">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Cantidad:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel3">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Reorden:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel4">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Tienda:"/>
+                                  </Properties>
+                                </Component>
                               </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="productoModificarTab">
@@ -934,9 +1001,19 @@
                                                       <Component id="producto_tamanoLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       <Component id="producto_embalajeLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       <Component id="producto_marcaLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="producto_reordenTextField1" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="producto_cantidadTextField1" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="producto_precioTextField1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="producto_tiendaComboBox1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                           <Component id="producto_marcaTextField1" alignment="0" pref="150" max="32767" attributes="0"/>
                                                           <Component id="producto_nombreTextField1" alignment="0" max="32767" attributes="0"/>
@@ -980,7 +1057,27 @@
                                               <Component id="producto_marcaLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="producto_marcaTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="233" max="32767" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="producto_precioTextField1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_cantidadTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_reordenTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="producto_tiendaComboBox1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="61" max="32767" attributes="0"/>
                                           <Component id="modificarProductoButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -1032,6 +1129,43 @@
                                 <Component class="javax.swing.JComboBox" name="modificarProductosComboBox">
                                   <Events>
                                     <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="modificarProductosComboBoxItemStateChanged"/>
+                                  </Events>
+                                  <AuxValues>
+                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                  </AuxValues>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel5">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Precio:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_precioTextField1">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel6">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Cantidad:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_cantidadTextField1">
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="producto_reordenTextField1">
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="producto_reordenTextField1ActionPerformed"/>
+                                  </Events>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel7">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Reorden:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel8">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Tienda:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JComboBox" name="producto_tiendaComboBox1">
+                                  <Events>
+                                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="producto_tiendaComboBox1ItemStateChanged"/>
                                   </Events>
                                   <AuxValues>
                                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1903,7 +2037,7 @@
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
-                            <Component class="javax.swing.JTable" name="ventasTiendaTable1">
+                            <Component class="javax.swing.JTable" name="productosTiendaTable">
                               <Properties>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                   <Table columnCount="4" rowCount="4">
@@ -1944,15 +2078,74 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="673" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="productosPaisScrollPane" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="productosPaisComboBox" min="-2" pref="350" max="-2" attributes="0"/>
+                                          <EmptySpace pref="207" max="32767" attributes="0"/>
+                                          <Component id="productosPaisButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="463" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="productosPaisComboBox" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
+                                      <Component id="productosPaisButton" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="productosPaisScrollPane" pref="403" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JComboBox" name="productosPaisComboBox">
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="productosPaisComboBoxItemStateChanged"/>
+                          </Events>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="productosPaisButton">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Ver Productos"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productosPaisButtonActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="productosPaisScrollPane">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="productosPaisTable">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="4" rowCount="4">
+                                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel6">
                       <Properties>
@@ -1971,15 +2164,74 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="673" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ventasAnualesTiendaScrollPane" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="ventasAnualesTiendaComboBox" min="-2" pref="350" max="-2" attributes="0"/>
+                                          <EmptySpace pref="226" max="32767" attributes="0"/>
+                                          <Component id="ventasAnualesTiendaButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="463" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="ventasAnualesTiendaComboBox" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
+                                      <Component id="ventasAnualesTiendaButton" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="ventasAnualesTiendaScrollPane" pref="403" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JComboBox" name="ventasAnualesTiendaComboBox">
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ventasAnualesTiendaComboBoxItemStateChanged"/>
+                          </Events>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="ventasAnualesTiendaButton">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Ver Ventas"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ventasAnualesTiendaButtonActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="ventasAnualesTiendaScrollPane">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="ventasAnualesTiendaTable">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="4" rowCount="4">
+                                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel7">
                       <Properties>

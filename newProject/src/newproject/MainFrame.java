@@ -110,6 +110,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         producto_marcaLabel = new javax.swing.JLabel();
         producto_marcaTextField = new javax.swing.JTextField();
         crearProductoButton = new javax.swing.JButton();
+        producto_precioTextField = new javax.swing.JTextField();
+        producto_cantidadTextField = new javax.swing.JTextField();
+        producto_reordenTextField = new javax.swing.JTextField();
+        producto_tiendaComboBox = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         productoModificarTab = new javax.swing.JPanel();
         producto_codigoUPCLabel1 = new javax.swing.JLabel();
         producto_nombreLabel1 = new javax.swing.JLabel();
@@ -122,6 +130,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         producto_marcaTextField1 = new javax.swing.JTextField();
         modificarProductoButton = new javax.swing.JButton();
         modificarProductosComboBox = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        producto_precioTextField1 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        producto_cantidadTextField1 = new javax.swing.JTextField();
+        producto_reordenTextField1 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        producto_tiendaComboBox1 = new javax.swing.JComboBox<>();
         productoEliminarTab = new javax.swing.JPanel();
         tienda_idLabel4 = new javax.swing.JLabel();
         eliminarProductoComboBox = new javax.swing.JComboBox<>();
@@ -175,10 +191,18 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         productosTiendaTab = new javax.swing.JPanel();
         productosTiendaComboBox = new javax.swing.JComboBox<>();
         productosTiendaScrollPane = new javax.swing.JScrollPane();
-        ventasTiendaTable1 = new javax.swing.JTable();
+        productosTiendaTable = new javax.swing.JTable();
         productosTiendaButton = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
+        productosPaisComboBox = new javax.swing.JComboBox<>();
+        productosPaisButton = new javax.swing.JButton();
+        productosPaisScrollPane = new javax.swing.JScrollPane();
+        productosPaisTable = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
+        ventasAnualesTiendaComboBox = new javax.swing.JComboBox<>();
+        ventasAnualesTiendaButton = new javax.swing.JButton();
+        ventasAnualesTiendaScrollPane = new javax.swing.JScrollPane();
+        ventasAnualesTiendaTable = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         userScreen = new javax.swing.JDialog();
@@ -634,6 +658,26 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             }
         });
 
+        producto_reordenTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                producto_reordenTextFieldActionPerformed(evt);
+            }
+        });
+
+        producto_tiendaComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                producto_tiendaComboBoxItemStateChanged(evt);
+            }
+        });
+
+        jLabel1.setText("Precio:");
+
+        jLabel2.setText("Cantidad:");
+
+        jLabel3.setText("Reorden:");
+
+        jLabel4.setText("Tienda:");
+
         javax.swing.GroupLayout productoCrearTabLayout = new javax.swing.GroupLayout(productoCrearTab);
         productoCrearTab.setLayout(productoCrearTabLayout);
         productoCrearTabLayout.setHorizontalGroup(
@@ -650,15 +694,24 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                             .addComponent(producto_nombreLabel)
                             .addComponent(producto_tamanoLabel)
                             .addComponent(producto_embalajeLabel)
-                            .addComponent(producto_marcaLabel))
+                            .addComponent(producto_marcaLabel)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
                         .addGap(18, 18, 18)
-                        .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(producto_marcaTextField)
-                            .addComponent(producto_nombreTextField)
-                            .addComponent(producto_tamanoLabelTextField)
-                            .addComponent(producto_embalajeTextField)
-                            .addComponent(producto_codigoUPCTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
-                        .addGap(0, 452, Short.MAX_VALUE)))
+                        .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(producto_reordenTextField)
+                                .addComponent(producto_cantidadTextField)
+                                .addComponent(producto_precioTextField)
+                                .addComponent(producto_marcaTextField)
+                                .addComponent(producto_nombreTextField)
+                                .addComponent(producto_tamanoLabelTextField)
+                                .addComponent(producto_embalajeTextField)
+                                .addComponent(producto_codigoUPCTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                            .addComponent(producto_tiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 402, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         productoCrearTabLayout.setVerticalGroup(
@@ -684,7 +737,23 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(producto_marcaLabel)
                     .addComponent(producto_marcaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_precioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_cantidadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_reordenTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_tiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(crearProductoButton)
                 .addContainerGap())
         );
@@ -716,6 +785,26 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             }
         });
 
+        jLabel5.setText("Precio:");
+
+        jLabel6.setText("Cantidad:");
+
+        producto_reordenTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                producto_reordenTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Reorden:");
+
+        jLabel8.setText("Tienda:");
+
+        producto_tiendaComboBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                producto_tiendaComboBox1ItemStateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout productoModificarTabLayout = new javax.swing.GroupLayout(productoModificarTab);
         productoModificarTab.setLayout(productoModificarTabLayout);
         productoModificarTabLayout.setHorizontalGroup(
@@ -732,9 +821,18 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                             .addComponent(producto_nombreLabel1)
                             .addComponent(producto_tamanoLabel1)
                             .addComponent(producto_embalajeLabel1)
-                            .addComponent(producto_marcaLabel1))
+                            .addComponent(producto_marcaLabel1)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8))
                         .addGap(18, 18, 18)
                         .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(producto_reordenTextField1)
+                                .addComponent(producto_cantidadTextField1)
+                                .addComponent(producto_precioTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(producto_tiendaComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(producto_marcaTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                                 .addComponent(producto_nombreTextField1)
@@ -767,7 +865,23 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(producto_marcaLabel1)
                     .addComponent(producto_marcaTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(producto_precioTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_cantidadTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_reordenTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_tiendaComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(modificarProductoButton)
                 .addContainerGap())
         );
@@ -1269,7 +1383,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             }
         });
 
-        ventasTiendaTable1.setModel(new javax.swing.table.DefaultTableModel(
+        productosTiendaTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1280,7 +1394,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        productosTiendaScrollPane.setViewportView(ventasTiendaTable1);
+        productosTiendaScrollPane.setViewportView(productosTiendaTable);
 
         productosTiendaButton.setText("Ver Productos");
         productosTiendaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1319,30 +1433,112 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
+        productosPaisComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                productosPaisComboBoxItemStateChanged(evt);
+            }
+        });
+
+        productosPaisButton.setText("Ver Productos");
+        productosPaisButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productosPaisButtonActionPerformed(evt);
+            }
+        });
+
+        productosPaisTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        productosPaisScrollPane.setViewportView(productosPaisTable);
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 673, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(productosPaisScrollPane)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(productosPaisComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
+                        .addComponent(productosPaisButton)))
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 463, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(productosPaisComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(productosPaisButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productosPaisScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
         );
 
         reportesTabbedPane.addTab("Top 20: Productos por País", jPanel5);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
+        ventasAnualesTiendaComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ventasAnualesTiendaComboBoxItemStateChanged(evt);
+            }
+        });
+
+        ventasAnualesTiendaButton.setText("Ver Ventas");
+        ventasAnualesTiendaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ventasAnualesTiendaButtonActionPerformed(evt);
+            }
+        });
+
+        ventasAnualesTiendaTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        ventasAnualesTiendaScrollPane.setViewportView(ventasAnualesTiendaTable);
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 673, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ventasAnualesTiendaScrollPane)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(ventasAnualesTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
+                        .addComponent(ventasAnualesTiendaButton)))
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 463, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ventasAnualesTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ventasAnualesTiendaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ventasAnualesTiendaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
         );
 
         reportesTabbedPane.addTab("Top 5: Tiendas por Ventas Anuales", jPanel6);
@@ -1584,14 +1780,23 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         String tamano = producto_tamanoLabelTextField.getText();
         String embalaje = producto_embalajeTextField.getText();
         String marca = producto_marcaTextField.getText();
+        
+        int tienda_id = Integer.parseInt(producto_tiendaComboBox.getSelectedItem().toString().substring(0, producto_tiendaComboBox.getSelectedItem().toString().indexOf('-')-1));
+        int codigo_UPC = Integer.parseInt(producto_codigoUPCTextField.getText());
+        int precio = Integer.parseInt(producto_precioTextField.getText());
+        int cantidad = Integer.parseInt(producto_cantidadTextField.getText());
+        int reorden = Integer.parseInt(producto_reordenTextField.getText());
 
-        Insertar.insercionPRODUCTO(upc, nombre, tamano, embalaje, marca);
+        Insertar.insercionPRODUCTO(upc, nombre, tamano, embalaje, marca, tienda_id, codigo_UPC, precio, cantidad, reorden);
 
         producto_codigoUPCTextField.setText("");
         producto_nombreTextField.setText("");
         producto_tamanoLabelTextField.setText("");
         producto_embalajeTextField.setText("");
         producto_marcaTextField.setText("");
+        producto_precioTextField.setText("");
+        producto_cantidadTextField.setText("");
+        producto_reordenTextField.setText("");
         
 
     }//GEN-LAST:event_crearProductoButtonActionPerformed
@@ -1696,6 +1901,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         eliminarClienteComboBox.removeAllItems();
         Reportes.comprasClienteComboBox(eliminarClienteComboBox);
         
+        producto_tiendaComboBox.removeAllItems();
+        Reportes.ventasTiendaComboBox(producto_tiendaComboBox);
         modificarProductosComboBox.removeAllItems();
         Reportes.productosComboBox(modificarProductosComboBox);
         eliminarProductoComboBox.removeAllItems();
@@ -1707,6 +1914,12 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         Reportes.comprasClienteComboBox(comprasClienteComboBox);
         ventasTiendaComboBox.removeAllItems();
         Reportes.ventasTiendaComboBox(ventasTiendaComboBox);
+        productosTiendaComboBox.removeAllItems();
+        Reportes.ventasTiendaComboBox(productosTiendaComboBox);
+        productosPaisComboBox.removeAll();
+        Reportes.PaisesComboBox(productosPaisComboBox);
+        ventasAnualesTiendaComboBox.removeAllItems();
+        Reportes.ventasTiendaComboBox(ventasAnualesTiendaComboBox);
     }//GEN-LAST:event_adminTabbedPaneStateChanged
 
     private void ventasTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ventasTiendaComboBoxItemStateChanged
@@ -1776,6 +1989,38 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private void productosTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosTiendaButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_productosTiendaButtonActionPerformed
+
+    private void producto_tiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_producto_tiendaComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_producto_tiendaComboBoxItemStateChanged
+
+    private void producto_reordenTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_producto_reordenTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_producto_reordenTextFieldActionPerformed
+
+    private void producto_reordenTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_producto_reordenTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_producto_reordenTextField1ActionPerformed
+
+    private void producto_tiendaComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_producto_tiendaComboBox1ItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_producto_tiendaComboBox1ItemStateChanged
+
+    private void productosPaisComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_productosPaisComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productosPaisComboBoxItemStateChanged
+
+    private void productosPaisButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosPaisButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productosPaisButtonActionPerformed
+
+    private void ventasAnualesTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ventasAnualesTiendaComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ventasAnualesTiendaComboBoxItemStateChanged
+
+    private void ventasAnualesTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasAnualesTiendaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ventasAnualesTiendaButtonActionPerformed
 
     
     public static void main(String args[]) {
@@ -1879,6 +2124,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JScrollPane inventarioProductosScrollPane;
     private javax.swing.JPanel inventarioProductosTab;
     private javax.swing.JTable inventarioProductosTable;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
@@ -1903,6 +2156,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel productoModificarTab;
     private javax.swing.JPanel productoTab;
     private javax.swing.JTabbedPane productoTabbedPane;
+    private javax.swing.JTextField producto_cantidadTextField;
+    private javax.swing.JTextField producto_cantidadTextField1;
     private javax.swing.JLabel producto_codigoUPCLabel;
     private javax.swing.JLabel producto_codigoUPCLabel1;
     private javax.swing.JTextField producto_codigoUPCTextField;
@@ -1918,14 +2173,25 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JLabel producto_nombreLabel1;
     private javax.swing.JTextField producto_nombreTextField;
     private javax.swing.JTextField producto_nombreTextField1;
+    private javax.swing.JTextField producto_precioTextField;
+    private javax.swing.JTextField producto_precioTextField1;
+    private javax.swing.JTextField producto_reordenTextField;
+    private javax.swing.JTextField producto_reordenTextField1;
     private javax.swing.JLabel producto_tamanoLabel;
     private javax.swing.JLabel producto_tamanoLabel1;
     private javax.swing.JTextField producto_tamanoLabelTextField;
     private javax.swing.JTextField producto_tamanoLabelTextField1;
+    private javax.swing.JComboBox<String> producto_tiendaComboBox;
+    private javax.swing.JComboBox<String> producto_tiendaComboBox1;
+    private javax.swing.JButton productosPaisButton;
+    private javax.swing.JComboBox<String> productosPaisComboBox;
+    private javax.swing.JScrollPane productosPaisScrollPane;
+    private javax.swing.JTable productosPaisTable;
     private javax.swing.JButton productosTiendaButton;
     private javax.swing.JComboBox<String> productosTiendaComboBox;
     private javax.swing.JScrollPane productosTiendaScrollPane;
     private javax.swing.JPanel productosTiendaTab;
+    private javax.swing.JTable productosTiendaTable;
     private javax.swing.JButton refreshInventarioProductosButton;
     private javax.swing.JPanel reportesTab;
     private javax.swing.JTabbedPane reportesTabbedPane;
@@ -1964,11 +2230,14 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JTextField vendedor_idTextField;
     private javax.swing.JLabel vendedor_nombreLabel;
     private javax.swing.JTextField vendedor_nombreTextField;
+    private javax.swing.JButton ventasAnualesTiendaButton;
+    private javax.swing.JComboBox<String> ventasAnualesTiendaComboBox;
+    private javax.swing.JScrollPane ventasAnualesTiendaScrollPane;
+    private javax.swing.JTable ventasAnualesTiendaTable;
     private javax.swing.JButton ventasTiendaButton;
     private javax.swing.JComboBox<String> ventasTiendaComboBox;
     private javax.swing.JScrollPane ventasTiendaScrollPane;
     private javax.swing.JPanel ventasTiendaTab;
     private javax.swing.JTable ventasTiendaTable;
-    private javax.swing.JTable ventasTiendaTable1;
     // End of variables declaration//GEN-END:variables
 }

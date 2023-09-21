@@ -266,9 +266,7 @@ public class Reportes {
                 datos[3] = rs.getString(4);
                 datos[4] = rs.getString(5);
                 
-                if (datos[6].equals(idFiltrar)) {
-                    model.addRow(datos);
-                }
+                model.addRow(datos);
             }
            
             ventasTiendaTable.setModel(model);
@@ -277,5 +275,27 @@ public class Reportes {
             JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
         }
         
+    }
+    
+    public static void PaisesComboBox(JComboBox ComboboxPaises) {
+        
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+                        
+            String query = "SELECT DISTINCT ubicacion FROM UBICACION ORDER BY ubicacion ";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            
+            while (resultSet.next()) {
+                String ubicacion = resultSet.getString("ubicacion");
+                String prodCB = (ubicacion);
+                
+                ComboboxPaises.addItem(prodCB);
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
+        }
     }
 }

@@ -37,7 +37,7 @@ public class Insertar {
         }
     }
 
-    public static void insercionPRODUCTO(int upc, String nombre, String tamano, String embalaje, String marca){
+    public static void insercionPRODUCTO(int upc, String nombre, String tamano, String embalaje, String marca, int tienda_id, int producto_codigoUPC, int precio, int cantidad, int reorden){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -50,6 +50,7 @@ public class Insertar {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
             statement.executeQuery("call CrearProducto("+upc+", \'"+nombre+"\', \'"+tamano+"\', \'"+embalaje+"\', \'"+marca+"\' )");
+            statement.executeQuery("call CrearInventario("+tienda_id+", \'"+producto_codigoUPC+"\', "+precio+", "+cantidad+", "+reorden+")");
             //statement.executeUpdate("INSERT INTO PRODUCTO VALUES(" + upc + ",\'" + nombre + "\',\'" + tamano + "\',\'" + embalaje + "\', \' " + marca + " \')");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
