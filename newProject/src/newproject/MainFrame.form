@@ -18,7 +18,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="adminTabbedPane" max="32767" attributes="0"/>
+                  <Component id="adminTabbedPane" pref="905" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -62,7 +62,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="mantenimientoTabbedPane" alignment="1" max="32767" attributes="0"/>
+                      <Component id="mantenimientoTabbedPane" alignment="1" pref="905" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -99,7 +99,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="tiendaTabbedPane" alignment="0" max="32767" attributes="0"/>
+                              <Component id="tiendaTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -269,7 +269,7 @@
                                               </Group>
                                               <Component id="modificarTiendaComboBox" min="-2" pref="350" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="325" max="32767" attributes="0"/>
+                                          <EmptySpace pref="313" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -363,7 +363,7 @@
                                           <Component id="tienda_idLabel2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarTiendaComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                                          <EmptySpace pref="315" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -427,7 +427,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="clienteTabbedPane" alignment="0" max="32767" attributes="0"/>
+                              <Component id="clienteTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -477,7 +477,7 @@
                                               <Component id="cliente_nombreTextField" alignment="0" max="32767" attributes="0"/>
                                               <Component id="cliente_correoTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="480" max="32767" attributes="0"/>
+                                          <EmptySpace pref="468" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
@@ -575,7 +575,7 @@
                                               </Group>
                                               <Component id="modificarClienteComboBox" min="-2" pref="350" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="280" max="32767" attributes="0"/>
+                                          <EmptySpace pref="268" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
@@ -674,7 +674,7 @@
                                           <Component id="tienda_idLabel3" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarClienteComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                                          <EmptySpace pref="315" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -738,7 +738,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="productoTabbedPane" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productoTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -808,7 +808,7 @@
                                                       </Group>
                                                       <Component id="producto_tiendaComboBox" min="-2" pref="200" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="416" max="32767" attributes="0"/>
+                                                  <EmptySpace min="0" pref="404" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -998,7 +998,7 @@
                                                       </Group>
                                                       <Component id="modificarProductosComboBox" min="-2" pref="350" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="266" max="32767" attributes="0"/>
+                                                  <EmptySpace min="0" pref="254" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1119,7 +1119,7 @@
                                           <Component id="tienda_idLabel4" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarProductoComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                                          <EmptySpace pref="315" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -1183,7 +1183,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="vendedorTabbedPane" alignment="0" max="32767" attributes="0"/>
+                              <Component id="vendedorTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -1236,7 +1236,7 @@
                                               <Component id="vendedor_idTextField" pref="150" max="32767" attributes="0"/>
                                               <Component id="vendedor_nombreTextField" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="535" max="32767" attributes="0"/>
+                                          <EmptySpace pref="523" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -1305,7 +1305,7 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="765" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="753" max="32767" attributes="0"/>
                                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
@@ -1418,7 +1418,7 @@
                                           <Component id="tienda_idLabel5" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarVendedorComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                                          <EmptySpace pref="315" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -1482,7 +1482,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="facturaTabbedPane" alignment="0" max="32767" attributes="0"/>
+                              <Component id="facturaTabbedPane" alignment="0" pref="829" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -1525,7 +1525,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace pref="659" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="647" max="32767" attributes="0"/>
                                                   <Component id="crearFacturaButton" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
