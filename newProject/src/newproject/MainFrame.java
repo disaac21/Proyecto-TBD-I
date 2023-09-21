@@ -2049,7 +2049,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }//GEN-LAST:event_eliminarTiendaComboBoxItemStateChanged
 
     private void eliminarTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarTiendaButtonActionPerformed
-        // TODO add your handling code here:
+        int id = Integer.parseInt(eliminarTiendaComboBox.getSelectedItem().toString().substring(0, eliminarTiendaComboBox.getSelectedItem().toString().indexOf('-')-1));
+        Eliminar.eliminarTIENDA(id);
     }//GEN-LAST:event_eliminarTiendaButtonActionPerformed
 
     private void modificarClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarClienteButtonActionPerformed
@@ -2072,7 +2073,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }//GEN-LAST:event_eliminarClienteComboBoxItemStateChanged
 
     private void eliminarClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarClienteButtonActionPerformed
-        // TODO add your handling code here:
+        int id = Integer.parseInt(eliminarClienteComboBox.getSelectedItem().toString().substring(0, eliminarClienteComboBox.getSelectedItem().toString().indexOf('-')-1));
+        Eliminar.eliminarCLIENTE(id);
     }//GEN-LAST:event_eliminarClienteButtonActionPerformed
 
     private void modificarProductoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarProductoButtonActionPerformed
@@ -2099,7 +2101,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }//GEN-LAST:event_eliminarProductoComboBoxItemStateChanged
 
     private void eliminarProductoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarProductoButton1ActionPerformed
-        // TODO add your handling code here:
+        int id = Integer.parseInt(eliminarProductoComboBox.getSelectedItem().toString().substring(0, eliminarProductoComboBox.getSelectedItem().toString().indexOf('-')-1));
+        Eliminar.eliminarPRODUCTO(id);
     }//GEN-LAST:event_eliminarProductoButton1ActionPerformed
 
     private void productosTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_productosTiendaComboBoxItemStateChanged
@@ -2155,7 +2158,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }//GEN-LAST:event_eliminarVendedorComboBoxItemStateChanged
 
     private void eliminarProductoButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarProductoButton2ActionPerformed
-        // TODO add your handling code here:
+        int id = Integer.parseInt(eliminarVendedorComboBox.getSelectedItem().toString().substring(0, eliminarVendedorComboBox.getSelectedItem().toString().indexOf('-')-1));
+        Eliminar.eliminarVENDEDOR(id);
     }//GEN-LAST:event_eliminarProductoButton2ActionPerformed
 
     
