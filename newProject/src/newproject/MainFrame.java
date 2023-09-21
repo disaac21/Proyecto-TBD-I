@@ -193,18 +193,23 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         productosTiendaScrollPane = new javax.swing.JScrollPane();
         productosTiendaTable = new javax.swing.JTable();
         productosTiendaButton = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
+        Top20ProductosPais = new javax.swing.JPanel();
         productosPaisComboBox = new javax.swing.JComboBox<>();
         productosPaisButton = new javax.swing.JButton();
         productosPaisScrollPane = new javax.swing.JScrollPane();
         productosPaisTable = new javax.swing.JTable();
-        jPanel6 = new javax.swing.JPanel();
-        ventasAnualesTiendaComboBox = new javax.swing.JComboBox<>();
+        Top5VentasAnuales = new javax.swing.JPanel();
         ventasAnualesTiendaButton = new javax.swing.JButton();
         ventasAnualesTiendaScrollPane = new javax.swing.JScrollPane();
         ventasAnualesTiendaTable = new javax.swing.JTable();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
+        TiendasCocaPepsi = new javax.swing.JPanel();
+        ventasCocaPepsiButton = new javax.swing.JButton();
+        ventasCocaPepsiScrollPane = new javax.swing.JScrollPane();
+        ventasCocaPepsiTable = new javax.swing.JTable();
+        productType = new javax.swing.JPanel();
+        productTypeButton = new javax.swing.JButton();
+        productTypeScrollPane = new javax.swing.JScrollPane();
+        productTypeTable = new javax.swing.JTable();
         userScreen = new javax.swing.JDialog();
         loginPanel = new javax.swing.JPanel();
         loginLabel = new javax.swing.JLabel();
@@ -1431,7 +1436,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         reportesTabbedPane.addTab("Top 20: Productos por Tienda", productosTiendaTab);
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        Top20ProductosPais.setBackground(new java.awt.Color(255, 255, 255));
 
         productosPaisComboBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -1459,25 +1464,25 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         ));
         productosPaisScrollPane.setViewportView(productosPaisTable);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout Top20ProductosPaisLayout = new javax.swing.GroupLayout(Top20ProductosPais);
+        Top20ProductosPais.setLayout(Top20ProductosPaisLayout);
+        Top20ProductosPaisLayout.setHorizontalGroup(
+            Top20ProductosPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Top20ProductosPaisLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Top20ProductosPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(productosPaisScrollPane)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addGroup(Top20ProductosPaisLayout.createSequentialGroup()
                         .addComponent(productosPaisComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
                         .addComponent(productosPaisButton)))
                 .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        Top20ProductosPaisLayout.setVerticalGroup(
+            Top20ProductosPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Top20ProductosPaisLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(Top20ProductosPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(productosPaisComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(productosPaisButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1485,17 +1490,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGap(14, 14, 14))
         );
 
-        reportesTabbedPane.addTab("Top 20: Productos por País", jPanel5);
+        reportesTabbedPane.addTab("Top 20: Productos por País", Top20ProductosPais);
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        Top5VentasAnuales.setBackground(new java.awt.Color(255, 255, 255));
 
-        ventasAnualesTiendaComboBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                ventasAnualesTiendaComboBoxItemStateChanged(evt);
-            }
-        });
-
-        ventasAnualesTiendaButton.setText("Ver Ventas");
+        ventasAnualesTiendaButton.setText("Refresh");
         ventasAnualesTiendaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ventasAnualesTiendaButtonActionPerformed(evt);
@@ -1515,63 +1514,124 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         ));
         ventasAnualesTiendaScrollPane.setViewportView(ventasAnualesTiendaTable);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout Top5VentasAnualesLayout = new javax.swing.GroupLayout(Top5VentasAnuales);
+        Top5VentasAnuales.setLayout(Top5VentasAnualesLayout);
+        Top5VentasAnualesLayout.setHorizontalGroup(
+            Top5VentasAnualesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Top5VentasAnualesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ventasAnualesTiendaScrollPane)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(ventasAnualesTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
+                .addGroup(Top5VentasAnualesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ventasAnualesTiendaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
+                    .addGroup(Top5VentasAnualesLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(ventasAnualesTiendaButton)))
                 .addContainerGap())
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        Top5VentasAnualesLayout.setVerticalGroup(
+            Top5VentasAnualesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Top5VentasAnualesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ventasAnualesTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ventasAnualesTiendaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ventasAnualesTiendaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ventasAnualesTiendaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                 .addGap(14, 14, 14))
         );
 
-        reportesTabbedPane.addTab("Top 5: Tiendas por Ventas Anuales", jPanel6);
+        reportesTabbedPane.addTab("Top 5: Tiendas por Ventas Anuales", Top5VentasAnuales);
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        TiendasCocaPepsi.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 673, Short.MAX_VALUE)
+        ventasCocaPepsiButton.setText("Refresh");
+        ventasCocaPepsiButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ventasCocaPepsiButtonActionPerformed(evt);
+            }
+        });
+
+        ventasCocaPepsiTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        ventasCocaPepsiScrollPane.setViewportView(ventasCocaPepsiTable);
+
+        javax.swing.GroupLayout TiendasCocaPepsiLayout = new javax.swing.GroupLayout(TiendasCocaPepsi);
+        TiendasCocaPepsi.setLayout(TiendasCocaPepsiLayout);
+        TiendasCocaPepsiLayout.setHorizontalGroup(
+            TiendasCocaPepsiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TiendasCocaPepsiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TiendasCocaPepsiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ventasCocaPepsiScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
+                    .addGroup(TiendasCocaPepsiLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(ventasCocaPepsiButton)))
+                .addContainerGap())
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 463, Short.MAX_VALUE)
+        TiendasCocaPepsiLayout.setVerticalGroup(
+            TiendasCocaPepsiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TiendasCocaPepsiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ventasCocaPepsiButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ventasCocaPepsiScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
         );
 
-        reportesTabbedPane.addTab("Sales: Tiendas (CocaCola > Pepsi)", jPanel7);
+        reportesTabbedPane.addTab("Sales: Tiendas (CocaCola > Pepsi)", TiendasCocaPepsi);
 
-        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        productType.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 673, Short.MAX_VALUE)
+        productTypeButton.setText("Refresh");
+        productTypeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productTypeButtonActionPerformed(evt);
+            }
+        });
+
+        productTypeTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        productTypeScrollPane.setViewportView(productTypeTable);
+
+        javax.swing.GroupLayout productTypeLayout = new javax.swing.GroupLayout(productType);
+        productType.setLayout(productTypeLayout);
+        productTypeLayout.setHorizontalGroup(
+            productTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productTypeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(productTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(productTypeScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
+                    .addGroup(productTypeLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(productTypeButton)))
+                .addContainerGap())
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 463, Short.MAX_VALUE)
+        productTypeLayout.setVerticalGroup(
+            productTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productTypeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(productTypeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productTypeScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
         );
 
-        reportesTabbedPane.addTab("Top 3 Sales: Productos (Menos Leche)", jPanel8);
+        reportesTabbedPane.addTab("Top 3 Sales: Productos (Menos Leche)", productType);
 
         javax.swing.GroupLayout reportesTabLayout = new javax.swing.GroupLayout(reportesTab);
         reportesTab.setLayout(reportesTabLayout);
@@ -1918,8 +1978,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         Reportes.ventasTiendaComboBox(productosTiendaComboBox);
         productosPaisComboBox.removeAll();
         Reportes.PaisesComboBox(productosPaisComboBox);
-        ventasAnualesTiendaComboBox.removeAllItems();
-        Reportes.ventasTiendaComboBox(ventasAnualesTiendaComboBox);
+        
     }//GEN-LAST:event_adminTabbedPaneStateChanged
 
     private void ventasTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ventasTiendaComboBoxItemStateChanged
@@ -2014,13 +2073,17 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         // TODO add your handling code here:
     }//GEN-LAST:event_productosPaisButtonActionPerformed
 
-    private void ventasAnualesTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ventasAnualesTiendaComboBoxItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ventasAnualesTiendaComboBoxItemStateChanged
-
     private void ventasAnualesTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasAnualesTiendaButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ventasAnualesTiendaButtonActionPerformed
+
+    private void ventasCocaPepsiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasCocaPepsiButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ventasCocaPepsiButtonActionPerformed
+
+    private void productTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productTypeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productTypeButtonActionPerformed
 
     
     public static void main(String args[]) {
@@ -2067,6 +2130,9 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel TiendasCocaPepsi;
+    private javax.swing.JPanel Top20ProductosPais;
+    private javax.swing.JPanel Top5VentasAnuales;
     private javax.swing.JDialog adminScreen;
     private javax.swing.JTabbedPane adminTabbedPane;
     private javax.swing.JPanel clienteCrearTab;
@@ -2132,10 +2198,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JButton loginButton;
     private javax.swing.JLabel loginLabel;
@@ -2151,6 +2213,10 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JTextField passwordTextField;
     private javax.swing.JButton previewAdminButton;
     private javax.swing.JButton previewUserButton;
+    private javax.swing.JPanel productType;
+    private javax.swing.JButton productTypeButton;
+    private javax.swing.JScrollPane productTypeScrollPane;
+    private javax.swing.JTable productTypeTable;
     private javax.swing.JPanel productoCrearTab;
     private javax.swing.JPanel productoEliminarTab;
     private javax.swing.JPanel productoModificarTab;
@@ -2231,9 +2297,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JLabel vendedor_nombreLabel;
     private javax.swing.JTextField vendedor_nombreTextField;
     private javax.swing.JButton ventasAnualesTiendaButton;
-    private javax.swing.JComboBox<String> ventasAnualesTiendaComboBox;
     private javax.swing.JScrollPane ventasAnualesTiendaScrollPane;
     private javax.swing.JTable ventasAnualesTiendaTable;
+    private javax.swing.JButton ventasCocaPepsiButton;
+    private javax.swing.JScrollPane ventasCocaPepsiScrollPane;
+    private javax.swing.JTable ventasCocaPepsiTable;
     private javax.swing.JButton ventasTiendaButton;
     private javax.swing.JComboBox<String> ventasTiendaComboBox;
     private javax.swing.JScrollPane ventasTiendaScrollPane;
