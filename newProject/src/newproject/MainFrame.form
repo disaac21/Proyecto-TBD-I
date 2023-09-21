@@ -260,18 +260,16 @@
                                               <Component id="tienda_idLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="tienda_nombreLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="tienda_horarioLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="tienda_ubicacionLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                   <Component id="tienda_nombreTextField1" alignment="0" pref="150" max="32767" attributes="0"/>
                                                   <Component id="tienda_horarioTextField1" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tienda_ubicacionTextField1" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                               <Component id="modificarTiendaComboBox" min="-2" pref="350" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace pref="325" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -293,12 +291,7 @@
                                               <Component id="tienda_horarioLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="tienda_horarioTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="tienda_ubicacionLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="tienda_ubicacionTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace pref="273" max="32767" attributes="0"/>
+                                          <EmptySpace pref="313" max="32767" attributes="0"/>
                                           <Component id="modificarTiendaButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -332,13 +325,6 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="tienda_horarioTextField1">
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="tienda_ubicacionLabel1">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Ubicaci&#xf3;n:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="tienda_ubicacionTextField1">
                                 </Component>
                                 <Component class="javax.swing.JButton" name="modificarTiendaButton">
                                   <Properties>
@@ -377,7 +363,7 @@
                                           <Component id="tienda_idLabel2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarTiendaComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="313" max="32767" attributes="0"/>
+                                          <EmptySpace pref="327" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -491,7 +477,7 @@
                                               <Component id="cliente_nombreTextField" alignment="0" max="32767" attributes="0"/>
                                               <Component id="cliente_correoTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="466" max="32767" attributes="0"/>
+                                          <EmptySpace pref="480" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
@@ -589,11 +575,11 @@
                                               </Group>
                                               <Component id="modificarClienteComboBox" min="-2" pref="350" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="266" max="32767" attributes="0"/>
+                                          <EmptySpace pref="280" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="crearTiendaButton2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="modificarClienteButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -617,7 +603,7 @@
                                               <Component id="cliente_correoTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace pref="313" max="32767" attributes="0"/>
-                                          <Component id="crearTiendaButton2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="modificarClienteButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -643,12 +629,12 @@
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="cliente_correoTextField1">
                                 </Component>
-                                <Component class="javax.swing.JButton" name="crearTiendaButton2">
+                                <Component class="javax.swing.JButton" name="modificarClienteButton">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="Modificar Cliente"/>
                                   </Properties>
                                   <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearTiendaButton2ActionPerformed"/>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modificarClienteButtonActionPerformed"/>
                                   </Events>
                                 </Component>
                                 <Component class="javax.swing.JComboBox" name="modificarClienteComboBox">
@@ -688,7 +674,7 @@
                                           <Component id="tienda_idLabel3" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarClienteComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="313" max="32767" attributes="0"/>
+                                          <EmptySpace pref="327" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -822,7 +808,7 @@
                                                       </Group>
                                                       <Component id="producto_tiendaComboBox" min="-2" pref="200" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="402" max="32767" attributes="0"/>
+                                                  <EmptySpace min="0" pref="416" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1001,19 +987,9 @@
                                                       <Component id="producto_tamanoLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       <Component id="producto_embalajeLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       <Component id="producto_marcaLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="producto_reordenTextField1" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="producto_cantidadTextField1" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="producto_precioTextField1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="producto_tiendaComboBox1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                           <Component id="producto_marcaTextField1" alignment="0" pref="150" max="32767" attributes="0"/>
                                                           <Component id="producto_nombreTextField1" alignment="0" max="32767" attributes="0"/>
@@ -1022,7 +998,7 @@
                                                       </Group>
                                                       <Component id="modificarProductosComboBox" min="-2" pref="350" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="252" max="32767" attributes="0"/>
+                                                  <EmptySpace min="0" pref="266" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1057,27 +1033,7 @@
                                               <Component id="producto_marcaLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="producto_marcaTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="producto_precioTextField1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="producto_cantidadTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="producto_reordenTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="producto_tiendaComboBox1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace pref="61" max="32767" attributes="0"/>
+                                          <EmptySpace pref="233" max="32767" attributes="0"/>
                                           <Component id="modificarProductoButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -1134,43 +1090,6 @@
                                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                   </AuxValues>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel5">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Precio:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="producto_precioTextField1">
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel6">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Cantidad:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="producto_cantidadTextField1">
-                                </Component>
-                                <Component class="javax.swing.JTextField" name="producto_reordenTextField1">
-                                  <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="producto_reordenTextField1ActionPerformed"/>
-                                  </Events>
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel7">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Reorden:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel8">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="Tienda:"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JComboBox" name="producto_tiendaComboBox1">
-                                  <Events>
-                                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="producto_tiendaComboBox1ItemStateChanged"/>
-                                  </Events>
-                                  <AuxValues>
-                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                                  </AuxValues>
-                                </Component>
                               </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="productoEliminarTab">
@@ -1200,7 +1119,7 @@
                                           <Component id="tienda_idLabel4" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="eliminarProductoComboBox" min="-2" pref="350" max="-2" attributes="0"/>
-                                          <EmptySpace pref="313" max="32767" attributes="0"/>
+                                          <EmptySpace pref="327" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -1317,7 +1236,7 @@
                                               <Component id="vendedor_idTextField" pref="150" max="32767" attributes="0"/>
                                               <Component id="vendedor_nombreTextField" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="521" max="32767" attributes="0"/>
+                                          <EmptySpace pref="535" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -1386,15 +1305,91 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="765" max="32767" attributes="0"/>
+                                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="cliente_idLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="cliente_nombreLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="modificarVendedorComboBox" min="-2" pref="350" max="-2" attributes="0"/>
+                                                              <EmptySpace max="32767" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="cliente_nombreTextField2" min="-2" pref="200" max="-2" attributes="0"/>
+                                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <EmptySpace pref="608" max="-2" attributes="0"/>
+                                                      <Component id="modificarVendedorButton" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="cliente_idLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="modificarVendedorComboBox" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="cliente_nombreLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cliente_nombreTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="353" pref="353" max="-2" attributes="0"/>
+                                              <Component id="modificarVendedorButton" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace pref="7" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="cliente_idLabel2">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="ID:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JComboBox" name="modificarVendedorComboBox">
+                                  <Events>
+                                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="modificarVendedorComboBoxItemStateChanged"/>
+                                  </Events>
+                                  <AuxValues>
+                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                  </AuxValues>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="cliente_nombreLabel2">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="cliente_nombreTextField2">
+                                </Component>
+                                <Component class="javax.swing.JButton" name="modificarVendedorButton">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Modificar Vendedor"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modificarVendedorButtonActionPerformed"/>
+                                  </Events>
+                                </Component>
+                              </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="vendedorEliminarTab">
                               <Properties>
@@ -1413,15 +1408,58 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="eliminarProductoButton2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Component id="tienda_idLabel5" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                          <Component id="eliminarVendedorComboBox" min="-2" pref="350" max="-2" attributes="0"/>
+                                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="tienda_idLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="eliminarVendedorComboBox" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="387" max="32767" attributes="0"/>
+                                          <Component id="eliminarProductoButton2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="tienda_idLabel5">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="ID:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JComboBox" name="eliminarVendedorComboBox">
+                                  <Events>
+                                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="eliminarVendedorComboBoxItemStateChanged"/>
+                                  </Events>
+                                  <AuxValues>
+                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                  </AuxValues>
+                                </Component>
+                                <Component class="javax.swing.JButton" name="eliminarProductoButton2">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Eliminar Vendedor"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarProductoButton2ActionPerformed"/>
+                                  </Events>
+                                </Component>
+                              </SubComponents>
                             </Container>
                           </SubComponents>
                         </Container>
@@ -1487,7 +1525,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace pref="645" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="659" max="32767" attributes="0"/>
                                                   <Component id="crearFacturaButton" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">

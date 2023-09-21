@@ -298,4 +298,27 @@ public class Reportes {
             JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
         }
     }
+    
+    public static void vendedoresComboBox(JComboBox ComboboxVendedor) {
+        
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            statement = connection.createStatement();
+                        
+            String query = "SELECT id, nombre FROM VENDEDOR";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            
+            while (resultSet.next()) {
+                String prodID = resultSet.getString("id");
+                String prodName = resultSet.getString("nombre");
+                String prodCB = (prodID + " - " + prodName);
+                
+                ComboboxVendedor.addItem(prodCB);
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se mostro los productos en la tabla");
+        }
+    }
 }
