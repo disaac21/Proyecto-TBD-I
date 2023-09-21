@@ -96,6 +96,46 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         tienda_idLabel3 = new javax.swing.JLabel();
         eliminarClienteComboBox = new javax.swing.JComboBox<>();
         eliminarClienteButton = new javax.swing.JButton();
+        productoTab = new javax.swing.JPanel();
+        productoTabbedPane = new javax.swing.JTabbedPane();
+        productoCrearTab = new javax.swing.JPanel();
+        producto_codigoUPCLabel = new javax.swing.JLabel();
+        producto_codigoUPCTextField = new javax.swing.JTextField();
+        producto_nombreLabel = new javax.swing.JLabel();
+        producto_nombreTextField = new javax.swing.JTextField();
+        producto_tamanoLabel = new javax.swing.JLabel();
+        producto_tamanoLabelTextField = new javax.swing.JTextField();
+        producto_embalajeLabel = new javax.swing.JLabel();
+        producto_embalajeTextField = new javax.swing.JTextField();
+        producto_marcaLabel = new javax.swing.JLabel();
+        producto_marcaTextField = new javax.swing.JTextField();
+        crearProductoButton = new javax.swing.JButton();
+        productoModificarTab = new javax.swing.JPanel();
+        producto_codigoUPCLabel1 = new javax.swing.JLabel();
+        producto_nombreLabel1 = new javax.swing.JLabel();
+        producto_nombreTextField1 = new javax.swing.JTextField();
+        producto_tamanoLabel1 = new javax.swing.JLabel();
+        producto_tamanoLabelTextField1 = new javax.swing.JTextField();
+        producto_embalajeLabel1 = new javax.swing.JLabel();
+        producto_embalajeTextField1 = new javax.swing.JTextField();
+        producto_marcaLabel1 = new javax.swing.JLabel();
+        producto_marcaTextField1 = new javax.swing.JTextField();
+        modificarProductoButton = new javax.swing.JButton();
+        modificarProductosComboBox = new javax.swing.JComboBox<>();
+        productoEliminarTab = new javax.swing.JPanel();
+        tienda_idLabel4 = new javax.swing.JLabel();
+        eliminarProductoComboBox = new javax.swing.JComboBox<>();
+        eliminarProductoButton1 = new javax.swing.JButton();
+        vendedorTab = new javax.swing.JPanel();
+        vendedorTabbedPane = new javax.swing.JTabbedPane();
+        vendedorCrearTab = new javax.swing.JPanel();
+        vendedor_idLabel = new javax.swing.JLabel();
+        vendedor_idTextField = new javax.swing.JTextField();
+        vendedor_nombreLabel = new javax.swing.JLabel();
+        vendedor_nombreTextField = new javax.swing.JTextField();
+        crearVendedorButton = new javax.swing.JButton();
+        vendedorModificarTab = new javax.swing.JPanel();
+        vendedorEliminarTab = new javax.swing.JPanel();
         facturaTab = new javax.swing.JPanel();
         facturaTabbedPane = new javax.swing.JTabbedPane();
         facturaCrearTab = new javax.swing.JPanel();
@@ -116,32 +156,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         crearFacturaButton = new javax.swing.JButton();
         facturaModificarTab = new javax.swing.JPanel();
         facturaEliminarTab = new javax.swing.JPanel();
-        productoTab = new javax.swing.JPanel();
-        productoTabbedPane = new javax.swing.JTabbedPane();
-        productoCrearTab = new javax.swing.JPanel();
-        producto_codigoUPCLabel = new javax.swing.JLabel();
-        producto_codigoUPCTextField = new javax.swing.JTextField();
-        producto_nombreLabel = new javax.swing.JLabel();
-        producto_nombreTextField = new javax.swing.JTextField();
-        producto_tamanoLabel = new javax.swing.JLabel();
-        producto_tamanoLabelTextField = new javax.swing.JTextField();
-        producto_embalajeLabel = new javax.swing.JLabel();
-        producto_embalajeTextField = new javax.swing.JTextField();
-        producto_marcaLabel = new javax.swing.JLabel();
-        producto_marcaTextField = new javax.swing.JTextField();
-        crearProductoButton = new javax.swing.JButton();
-        productoModificarTab = new javax.swing.JPanel();
-        productoEliminarTab = new javax.swing.JPanel();
-        vendedorTab = new javax.swing.JPanel();
-        vendedorTabbedPane = new javax.swing.JTabbedPane();
-        vendedorCrearTab = new javax.swing.JPanel();
-        vendedor_idLabel = new javax.swing.JLabel();
-        vendedor_idTextField = new javax.swing.JTextField();
-        vendedor_nombreLabel = new javax.swing.JLabel();
-        vendedor_nombreTextField = new javax.swing.JTextField();
-        crearVendedorButton = new javax.swing.JButton();
-        vendedorModificarTab = new javax.swing.JPanel();
-        vendedorEliminarTab = new javax.swing.JPanel();
         reportesTab = new javax.swing.JPanel();
         reportesTabbedPane = new javax.swing.JTabbedPane();
         inventarioProductosTab = new javax.swing.JPanel();
@@ -158,7 +172,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         ventasTiendaTable = new javax.swing.JTable();
         ventasTiendaComboBox = new javax.swing.JComboBox<>();
         ventasTiendaButton = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        productosTiendaTab = new javax.swing.JPanel();
+        productosTiendaComboBox = new javax.swing.JComboBox<>();
+        productosTiendaScrollPane = new javax.swing.JScrollPane();
+        ventasTiendaTable1 = new javax.swing.JTable();
+        productosTiendaButton = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -260,7 +278,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(tiendaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tienda_ubicacionLabel)
                     .addComponent(tienda_ubicacionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 277, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton)
                 .addContainerGap())
         );
@@ -333,7 +351,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(tiendaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tienda_ubicacionLabel1)
                     .addComponent(tienda_ubicacionTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 271, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
                 .addComponent(modificarTiendaButton)
                 .addContainerGap())
         );
@@ -370,7 +388,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addComponent(tienda_idLabel2)
                 .addGap(59, 59, 59)
                 .addComponent(eliminarTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(294, Short.MAX_VALUE))
+                .addContainerGap(313, Short.MAX_VALUE))
         );
         tiendaEliminarTabLayout.setVerticalGroup(
             tiendaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,7 +397,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(tiendaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tienda_idLabel2)
                     .addComponent(eliminarTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 385, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 387, Short.MAX_VALUE)
                 .addComponent(eliminarTiendaButton)
                 .addContainerGap())
         );
@@ -434,7 +452,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                     .addComponent(cliente_idTextField)
                     .addComponent(cliente_nombreTextField)
                     .addComponent(cliente_correoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(447, Short.MAX_VALUE))
+                .addContainerGap(466, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteCrearTabLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton1)
@@ -455,7 +473,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(clienteCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cliente_correoLabel)
                     .addComponent(cliente_correoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 317, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton1)
                 .addContainerGap())
         );
@@ -499,7 +517,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                         .addComponent(cliente_nombreTextField1)
                         .addComponent(cliente_correoTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(modificarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteModificarTabLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton2)
@@ -520,7 +538,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(clienteModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cliente_correoLabel1)
                     .addComponent(cliente_correoTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 311, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 313, Short.MAX_VALUE)
                 .addComponent(crearTiendaButton2)
                 .addContainerGap())
         );
@@ -557,7 +575,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addComponent(tienda_idLabel3)
                 .addGap(59, 59, 59)
                 .addComponent(eliminarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(294, Short.MAX_VALUE))
+                .addContainerGap(313, Short.MAX_VALUE))
         );
         clienteEliminarTabLayout.setVerticalGroup(
             clienteEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -566,7 +584,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(clienteEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tienda_idLabel3)
                     .addComponent(eliminarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 385, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 387, Short.MAX_VALUE)
                 .addComponent(eliminarClienteButton)
                 .addContainerGap())
         );
@@ -585,149 +603,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         );
 
         mantenimientoTabbedPane.addTab("Cliente", clienteTab);
-
-        facturaTab.setBackground(new java.awt.Color(255, 255, 255));
-
-        facturaTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
-        facturaTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        facturaTabbedPane.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        facturaCrearTab.setBackground(new java.awt.Color(255, 255, 255));
-
-        factura_numeroLabel.setText("Número:");
-
-        factura_fechaLabel.setText("Fecha:");
-
-        factura_ISVLabel.setText("ISV:");
-
-        factura_subtotalLabel.setText("Subtotal");
-
-        factura_totalLabel.setText("Total");
-
-        facturacliente_idLabel.setText("Cliente ID:");
-
-        facturatienda_idLabel.setText("Tienda ID:");
-
-        crearFacturaButton.setText("Crear Factura");
-        crearFacturaButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearFacturaButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout facturaCrearTabLayout = new javax.swing.GroupLayout(facturaCrearTab);
-        facturaCrearTab.setLayout(facturaCrearTabLayout);
-        facturaCrearTabLayout.setHorizontalGroup(
-            facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(facturaCrearTabLayout.createSequentialGroup()
-                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, facturaCrearTabLayout.createSequentialGroup()
-                        .addContainerGap(626, Short.MAX_VALUE)
-                        .addComponent(crearFacturaButton))
-                    .addGroup(facturaCrearTabLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(factura_numeroLabel)
-                            .addComponent(factura_fechaLabel)
-                            .addComponent(factura_ISVLabel)
-                            .addComponent(factura_subtotalLabel)
-                            .addComponent(factura_totalLabel)
-                            .addComponent(facturacliente_idLabel)
-                            .addComponent(facturatienda_idLabel))
-                        .addGap(18, 18, 18)
-                        .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(factura_totalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(factura_fechaTextField)
-                                .addComponent(factura_ISVTextField)
-                                .addComponent(factura_subtotalTextField)
-                                .addComponent(factura_numeroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(facturacliente_idTextField)
-                                .addComponent(facturatienda_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        facturaCrearTabLayout.setVerticalGroup(
-            facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(facturaCrearTabLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(factura_numeroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(factura_numeroLabel))
-                .addGap(18, 18, 18)
-                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(factura_fechaLabel)
-                    .addComponent(factura_fechaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(factura_ISVLabel)
-                    .addComponent(factura_ISVTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(factura_subtotalLabel)
-                    .addComponent(factura_subtotalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(factura_totalLabel)
-                    .addComponent(factura_totalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(facturacliente_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(facturacliente_idLabel))
-                .addGap(18, 18, 18)
-                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(facturatienda_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(facturatienda_idLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
-                .addComponent(crearFacturaButton)
-                .addContainerGap())
-        );
-
-        facturaTabbedPane.addTab("Crear", facturaCrearTab);
-
-        facturaModificarTab.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout facturaModificarTabLayout = new javax.swing.GroupLayout(facturaModificarTab);
-        facturaModificarTab.setLayout(facturaModificarTabLayout);
-        facturaModificarTabLayout.setHorizontalGroup(
-            facturaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        facturaModificarTabLayout.setVerticalGroup(
-            facturaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        facturaTabbedPane.addTab("Modificar", facturaModificarTab);
-
-        facturaEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout facturaEliminarTabLayout = new javax.swing.GroupLayout(facturaEliminarTab);
-        facturaEliminarTab.setLayout(facturaEliminarTabLayout);
-        facturaEliminarTabLayout.setHorizontalGroup(
-            facturaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        facturaEliminarTabLayout.setVerticalGroup(
-            facturaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        facturaTabbedPane.addTab("Eliminar", facturaEliminarTab);
-
-        javax.swing.GroupLayout facturaTabLayout = new javax.swing.GroupLayout(facturaTab);
-        facturaTab.setLayout(facturaTabLayout);
-        facturaTabLayout.setHorizontalGroup(
-            facturaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(facturaTabbedPane)
-        );
-        facturaTabLayout.setVerticalGroup(
-            facturaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(facturaTabbedPane)
-        );
-
-        mantenimientoTabbedPane.addTab("Factura", facturaTab);
 
         productoTab.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -783,7 +658,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                             .addComponent(producto_tamanoLabelTextField)
                             .addComponent(producto_embalajeTextField)
                             .addComponent(producto_codigoUPCTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
-                        .addGap(0, 433, Short.MAX_VALUE)))
+                        .addGap(0, 452, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         productoCrearTabLayout.setVerticalGroup(
@@ -809,7 +684,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(productoCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(producto_marcaLabel)
                     .addComponent(producto_marcaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
                 .addComponent(crearProductoButton)
                 .addContainerGap())
         );
@@ -818,30 +693,129 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
 
         productoModificarTab.setBackground(new java.awt.Color(255, 255, 255));
 
+        producto_codigoUPCLabel1.setText("Código UPC:");
+
+        producto_nombreLabel1.setText("Nombre:");
+
+        producto_tamanoLabel1.setText("Tamaño:");
+
+        producto_embalajeLabel1.setText("Método de Embalaje");
+
+        producto_marcaLabel1.setText("Marca:");
+
+        modificarProductoButton.setText("Modificar Producto");
+        modificarProductoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarProductoButtonActionPerformed(evt);
+            }
+        });
+
+        modificarProductosComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                modificarProductosComboBoxItemStateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout productoModificarTabLayout = new javax.swing.GroupLayout(productoModificarTab);
         productoModificarTab.setLayout(productoModificarTabLayout);
         productoModificarTabLayout.setHorizontalGroup(
             productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(productoModificarTabLayout.createSequentialGroup()
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, productoModificarTabLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(modificarProductoButton))
+                    .addGroup(productoModificarTabLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(producto_codigoUPCLabel1)
+                            .addComponent(producto_nombreLabel1)
+                            .addComponent(producto_tamanoLabel1)
+                            .addComponent(producto_embalajeLabel1)
+                            .addComponent(producto_marcaLabel1))
+                        .addGap(18, 18, 18)
+                        .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(producto_marcaTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                .addComponent(producto_nombreTextField1)
+                                .addComponent(producto_tamanoLabelTextField1)
+                                .addComponent(producto_embalajeTextField1))
+                            .addComponent(modificarProductosComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 252, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         productoModificarTabLayout.setVerticalGroup(
             productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(productoModificarTabLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_codigoUPCLabel1)
+                    .addComponent(modificarProductosComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_nombreLabel1)
+                    .addComponent(producto_nombreTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_tamanoLabel1)
+                    .addComponent(producto_tamanoLabelTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_embalajeLabel1)
+                    .addComponent(producto_embalajeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(productoModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(producto_marcaLabel1)
+                    .addComponent(producto_marcaTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
+                .addComponent(modificarProductoButton)
+                .addContainerGap())
         );
 
         productoTabbedPane.addTab("Modificar", productoModificarTab);
 
         productoEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
 
+        tienda_idLabel4.setText("ID:");
+
+        eliminarProductoComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                eliminarProductoComboBoxItemStateChanged(evt);
+            }
+        });
+
+        eliminarProductoButton1.setText("Eliminar Producto");
+        eliminarProductoButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarProductoButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout productoEliminarTabLayout = new javax.swing.GroupLayout(productoEliminarTab);
         productoEliminarTab.setLayout(productoEliminarTabLayout);
         productoEliminarTabLayout.setHorizontalGroup(
             productoEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, productoEliminarTabLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(eliminarProductoButton1)
+                .addContainerGap())
+            .addGroup(productoEliminarTabLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(tienda_idLabel4)
+                .addGap(59, 59, 59)
+                .addComponent(eliminarProductoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(313, Short.MAX_VALUE))
         );
         productoEliminarTabLayout.setVerticalGroup(
             productoEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, productoEliminarTabLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(productoEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tienda_idLabel4)
+                    .addComponent(eliminarProductoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 387, Short.MAX_VALUE)
+                .addComponent(eliminarProductoButton1)
+                .addContainerGap())
         );
 
         productoTabbedPane.addTab("Eliminar", productoEliminarTab);
@@ -900,7 +874,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(vendedorCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(vendedor_idTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addComponent(vendedor_nombreTextField))
-                .addContainerGap(502, Short.MAX_VALUE))
+                .addContainerGap(521, Short.MAX_VALUE))
         );
         vendedorCrearTabLayout.setVerticalGroup(
             vendedorCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -913,7 +887,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addGroup(vendedorCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vendedor_nombreLabel)
                     .addComponent(vendedor_nombreTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 357, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 359, Short.MAX_VALUE)
                 .addComponent(crearVendedorButton)
                 .addContainerGap())
         );
@@ -962,6 +936,149 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         );
 
         mantenimientoTabbedPane.addTab("Vendedor", vendedorTab);
+
+        facturaTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        facturaTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
+        facturaTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        facturaTabbedPane.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        facturaCrearTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        factura_numeroLabel.setText("Número:");
+
+        factura_fechaLabel.setText("Fecha:");
+
+        factura_ISVLabel.setText("ISV:");
+
+        factura_subtotalLabel.setText("Subtotal");
+
+        factura_totalLabel.setText("Total");
+
+        facturacliente_idLabel.setText("Cliente ID:");
+
+        facturatienda_idLabel.setText("Tienda ID:");
+
+        crearFacturaButton.setText("Crear Factura");
+        crearFacturaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearFacturaButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout facturaCrearTabLayout = new javax.swing.GroupLayout(facturaCrearTab);
+        facturaCrearTab.setLayout(facturaCrearTabLayout);
+        facturaCrearTabLayout.setHorizontalGroup(
+            facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(facturaCrearTabLayout.createSequentialGroup()
+                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, facturaCrearTabLayout.createSequentialGroup()
+                        .addContainerGap(645, Short.MAX_VALUE)
+                        .addComponent(crearFacturaButton))
+                    .addGroup(facturaCrearTabLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(factura_numeroLabel)
+                            .addComponent(factura_fechaLabel)
+                            .addComponent(factura_ISVLabel)
+                            .addComponent(factura_subtotalLabel)
+                            .addComponent(factura_totalLabel)
+                            .addComponent(facturacliente_idLabel)
+                            .addComponent(facturatienda_idLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(factura_totalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(factura_fechaTextField)
+                                .addComponent(factura_ISVTextField)
+                                .addComponent(factura_subtotalTextField)
+                                .addComponent(factura_numeroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(facturacliente_idTextField)
+                                .addComponent(facturatienda_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        facturaCrearTabLayout.setVerticalGroup(
+            facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(facturaCrearTabLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(factura_numeroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(factura_numeroLabel))
+                .addGap(18, 18, 18)
+                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(factura_fechaLabel)
+                    .addComponent(factura_fechaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(factura_ISVLabel)
+                    .addComponent(factura_ISVTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(factura_subtotalLabel)
+                    .addComponent(factura_subtotalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(factura_totalLabel)
+                    .addComponent(factura_totalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(facturacliente_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facturacliente_idLabel))
+                .addGap(18, 18, 18)
+                .addGroup(facturaCrearTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(facturatienda_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facturatienda_idLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
+                .addComponent(crearFacturaButton)
+                .addContainerGap())
+        );
+
+        facturaTabbedPane.addTab("Crear", facturaCrearTab);
+
+        facturaModificarTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout facturaModificarTabLayout = new javax.swing.GroupLayout(facturaModificarTab);
+        facturaModificarTab.setLayout(facturaModificarTabLayout);
+        facturaModificarTabLayout.setHorizontalGroup(
+            facturaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        facturaModificarTabLayout.setVerticalGroup(
+            facturaModificarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        facturaTabbedPane.addTab("Modificar", facturaModificarTab);
+
+        facturaEliminarTab.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout facturaEliminarTabLayout = new javax.swing.GroupLayout(facturaEliminarTab);
+        facturaEliminarTab.setLayout(facturaEliminarTabLayout);
+        facturaEliminarTabLayout.setHorizontalGroup(
+            facturaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        facturaEliminarTabLayout.setVerticalGroup(
+            facturaEliminarTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        facturaTabbedPane.addTab("Eliminar", facturaEliminarTab);
+
+        javax.swing.GroupLayout facturaTabLayout = new javax.swing.GroupLayout(facturaTab);
+        facturaTab.setLayout(facturaTabLayout);
+        facturaTabLayout.setHorizontalGroup(
+            facturaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(facturaTabbedPane)
+        );
+        facturaTabLayout.setVerticalGroup(
+            facturaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(facturaTabbedPane)
+        );
+
+        mantenimientoTabbedPane.addTab("Factura", facturaTab);
 
         javax.swing.GroupLayout mantenimientoTabLayout = new javax.swing.GroupLayout(mantenimientoTab);
         mantenimientoTab.setLayout(mantenimientoTabLayout);
@@ -1015,7 +1132,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
             .addGroup(inventarioProductosTabLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(inventarioProductosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inventarioProductosScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
+                    .addComponent(inventarioProductosScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 667, Short.MAX_VALUE)
                     .addGroup(inventarioProductosTabLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(refreshInventarioProductosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -1027,7 +1144,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                 .addComponent(inventarioProductosScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(refreshInventarioProductosButton)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         reportesTabbedPane.addTab("Inventario de Productos", inventarioProductosTab);
@@ -1070,7 +1187,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                     .addComponent(comprasClienteScrollPane)
                     .addGroup(comprasClienteTabLayout.createSequentialGroup()
                         .addComponent(comprasClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
                         .addComponent(comprasClienteButton)))
                 .addContainerGap())
         );
@@ -1082,7 +1199,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                     .addComponent(comprasClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comprasClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(comprasClienteScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                .addComponent(comprasClienteScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                 .addGap(14, 14, 14))
         );
 
@@ -1126,7 +1243,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                     .addComponent(ventasTiendaScrollPane)
                     .addGroup(ventasTiendaTabLayout.createSequentialGroup()
                         .addComponent(ventasTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
                         .addComponent(ventasTiendaButton)))
                 .addContainerGap())
         );
@@ -1138,26 +1255,67 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
                     .addComponent(ventasTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ventasTiendaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ventasTiendaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                .addComponent(ventasTiendaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                 .addGap(14, 14, 14))
         );
 
         reportesTabbedPane.addTab("Historial: Ventas por Tienda", ventasTiendaTab);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        productosTiendaTab.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+        productosTiendaComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                productosTiendaComboBoxItemStateChanged(evt);
+            }
+        });
+
+        ventasTiendaTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        productosTiendaScrollPane.setViewportView(ventasTiendaTable1);
+
+        productosTiendaButton.setText("Ver Productos");
+        productosTiendaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productosTiendaButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout productosTiendaTabLayout = new javax.swing.GroupLayout(productosTiendaTab);
+        productosTiendaTab.setLayout(productosTiendaTabLayout);
+        productosTiendaTabLayout.setHorizontalGroup(
+            productosTiendaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productosTiendaTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(productosTiendaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(productosTiendaScrollPane)
+                    .addGroup(productosTiendaTabLayout.createSequentialGroup()
+                        .addComponent(productosTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
+                        .addComponent(productosTiendaButton)))
+                .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
+        productosTiendaTabLayout.setVerticalGroup(
+            productosTiendaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productosTiendaTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(productosTiendaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(productosTiendaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(productosTiendaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productosTiendaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
         );
 
-        reportesTabbedPane.addTab("Top 20: Productos por Tienda", jPanel4);
+        reportesTabbedPane.addTab("Top 20: Productos por Tienda", productosTiendaTab);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1165,11 +1323,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 673, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
+            .addGap(0, 463, Short.MAX_VALUE)
         );
 
         reportesTabbedPane.addTab("Top 20: Productos por País", jPanel5);
@@ -1180,11 +1338,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 673, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
+            .addGap(0, 463, Short.MAX_VALUE)
         );
 
         reportesTabbedPane.addTab("Top 5: Tiendas por Ventas Anuales", jPanel6);
@@ -1195,11 +1353,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 673, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
+            .addGap(0, 463, Short.MAX_VALUE)
         );
 
         reportesTabbedPane.addTab("Sales: Tiendas (CocaCola > Pepsi)", jPanel7);
@@ -1210,11 +1368,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 673, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
+            .addGap(0, 463, Short.MAX_VALUE)
         );
 
         reportesTabbedPane.addTab("Top 3 Sales: Productos (Menos Leche)", jPanel8);
@@ -1538,6 +1696,11 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
         eliminarClienteComboBox.removeAllItems();
         Reportes.comprasClienteComboBox(eliminarClienteComboBox);
         
+        modificarProductosComboBox.removeAllItems();
+        Reportes.productosComboBox(modificarProductosComboBox);
+        eliminarProductoComboBox.removeAllItems();
+        Reportes.productosComboBox(eliminarProductoComboBox);
+        
         
         //Reportes
         comprasClienteComboBox.removeAllItems();
@@ -1589,6 +1752,30 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private void eliminarClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarClienteButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_eliminarClienteButtonActionPerformed
+
+    private void modificarProductoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarProductoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarProductoButtonActionPerformed
+
+    private void modificarProductosComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_modificarProductosComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarProductosComboBoxItemStateChanged
+
+    private void eliminarProductoComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_eliminarProductoComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eliminarProductoComboBoxItemStateChanged
+
+    private void eliminarProductoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarProductoButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eliminarProductoButton1ActionPerformed
+
+    private void productosTiendaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_productosTiendaComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productosTiendaComboBoxItemStateChanged
+
+    private void productosTiendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosTiendaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productosTiendaButtonActionPerformed
 
     
     public static void main(String args[]) {
@@ -1666,6 +1853,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JButton crearVendedorButton;
     private javax.swing.JButton eliminarClienteButton;
     private javax.swing.JComboBox<String> eliminarClienteComboBox;
+    private javax.swing.JButton eliminarProductoButton1;
+    private javax.swing.JComboBox<String> eliminarProductoComboBox;
     private javax.swing.JButton eliminarTiendaButton;
     private javax.swing.JComboBox<String> eliminarTiendaComboBox;
     private javax.swing.JPanel facturaCrearTab;
@@ -1690,7 +1879,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JScrollPane inventarioProductosScrollPane;
     private javax.swing.JPanel inventarioProductosTab;
     private javax.swing.JTable inventarioProductosTable;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
@@ -1702,6 +1890,8 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel mantenimientoTab;
     private javax.swing.JTabbedPane mantenimientoTabbedPane;
     private javax.swing.JComboBox<String> modificarClienteComboBox;
+    private javax.swing.JButton modificarProductoButton;
+    private javax.swing.JComboBox<String> modificarProductosComboBox;
     private javax.swing.JButton modificarTiendaButton;
     private javax.swing.JComboBox<String> modificarTiendaComboBox;
     private javax.swing.JLabel passwordLabel;
@@ -1714,15 +1904,28 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JPanel productoTab;
     private javax.swing.JTabbedPane productoTabbedPane;
     private javax.swing.JLabel producto_codigoUPCLabel;
+    private javax.swing.JLabel producto_codigoUPCLabel1;
     private javax.swing.JTextField producto_codigoUPCTextField;
     private javax.swing.JLabel producto_embalajeLabel;
+    private javax.swing.JLabel producto_embalajeLabel1;
     private javax.swing.JTextField producto_embalajeTextField;
+    private javax.swing.JTextField producto_embalajeTextField1;
     private javax.swing.JLabel producto_marcaLabel;
+    private javax.swing.JLabel producto_marcaLabel1;
     private javax.swing.JTextField producto_marcaTextField;
+    private javax.swing.JTextField producto_marcaTextField1;
     private javax.swing.JLabel producto_nombreLabel;
+    private javax.swing.JLabel producto_nombreLabel1;
     private javax.swing.JTextField producto_nombreTextField;
+    private javax.swing.JTextField producto_nombreTextField1;
     private javax.swing.JLabel producto_tamanoLabel;
+    private javax.swing.JLabel producto_tamanoLabel1;
     private javax.swing.JTextField producto_tamanoLabelTextField;
+    private javax.swing.JTextField producto_tamanoLabelTextField1;
+    private javax.swing.JButton productosTiendaButton;
+    private javax.swing.JComboBox<String> productosTiendaComboBox;
+    private javax.swing.JScrollPane productosTiendaScrollPane;
+    private javax.swing.JPanel productosTiendaTab;
     private javax.swing.JButton refreshInventarioProductosButton;
     private javax.swing.JPanel reportesTab;
     private javax.swing.JTabbedPane reportesTabbedPane;
@@ -1739,6 +1942,7 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JLabel tienda_idLabel1;
     private javax.swing.JLabel tienda_idLabel2;
     private javax.swing.JLabel tienda_idLabel3;
+    private javax.swing.JLabel tienda_idLabel4;
     private javax.swing.JTextField tienda_idTextField;
     private javax.swing.JLabel tienda_nombreLabel;
     private javax.swing.JLabel tienda_nombreLabel1;
@@ -1765,5 +1969,6 @@ static String url = "jdbc:mysql://proyecto.cv7itbwgfcgt.us-east-1.rds.amazonaws.
     private javax.swing.JScrollPane ventasTiendaScrollPane;
     private javax.swing.JPanel ventasTiendaTab;
     private javax.swing.JTable ventasTiendaTable;
+    private javax.swing.JTable ventasTiendaTable1;
     // End of variables declaration//GEN-END:variables
 }
