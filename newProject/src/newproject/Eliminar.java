@@ -38,7 +38,7 @@ public class Eliminar {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
             
-            statement.executeQuery("call DeleteVendedor("+id+"\')");
+            statement.executeQuery("call DeleteVendedor("+id+")");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");
@@ -57,7 +57,7 @@ public class Eliminar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeQuery("call DeleteProducto("+upc+"\')");
+            statement.executeQuery("call DeleteProducto("+upc+")");
             //statement.executeQuery("call CrearInventario("+tienda_id+", \'"+producto_codigoUPC+"\', "+precio+", "+cantidad+", "+reorden+")");
             //statement.executeUpdate("INSERT INTO PRODUCTO VALUES(" + upc + ",\'" + nombre + "\',\'" + tamano + "\',\'" + embalaje + "\', \' " + marca + " \')");
         } catch (SQLException ex) {
@@ -78,7 +78,7 @@ public class Eliminar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeQuery("call DeleteFactura("+numero+"\')");
+            statement.executeQuery("call DeleteFactura("+numero+")");
             //statement.executeUpdate("INSERT INTO FACTURA VALUES(" + numero + ",\'" + fecha + "\'," + isv + ","+subtotal+","+total+","+clienteid+","+tiendaid+" )");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
@@ -98,7 +98,7 @@ public class Eliminar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeUpdate("CALL DeleteCliente("+id+"\')");
+            statement.executeUpdate("CALL DeleteCliente("+id+")");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("algo pasa en el insert");
@@ -119,7 +119,7 @@ public class Eliminar {
         try {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            statement.executeQuery("call DeleteTienda("+ id +"\')");
+            statement.executeQuery("call DeleteTienda("+ id +")");
             //statement.executeUpdate("INSERT INTO TIENDA VALUES(" + id + ", \'" + nombre + "\', \'" + horario + "\')");
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
